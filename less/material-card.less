@@ -1,0 +1,202 @@
+@import "gm-variables.less";
+@import "mixin.less";
+
+.material-card {
+    position: relative;
+    height: 0;
+    padding-bottom: calc(~'100% - 16px');
+    margin-bottom: 6.6em;
+    h2 {
+        position: absolute;
+        top: calc(~'100% - 16px');
+        left: 0;
+        width: 100%;
+        padding: 10px 16px;
+        color: #fff;
+        font-size: 1.4em;
+        line-height: 1.6em;
+        margin: 0;
+        z-index: 10;
+        .mc-transtition();
+        span {
+            display: block;
+        }
+        strong {
+            font-weight: 400;
+            display: block;
+            font-size: .8em;
+        }
+        &:before,
+        &:after {
+            content: ' ';
+            position: absolute;
+            left: 0;
+            top: -16px;
+            width: 0;
+            border: 8px solid;
+            .mc-transtition();
+        }
+        &:after {
+            top: auto;
+            bottom: 0;
+        }
+    }
+    &.mc-active {
+        @media screen and (max-width: 767px) {
+            padding-bottom: 0;
+            height: auto;
+        }
+        h2 {
+            top: 0;
+            padding: 10px 16px 10px 90px;
+            &:before {
+                top: 0;
+            }
+            &:after {
+                bottom: -16px;
+            }
+        }
+    }
+    .mc-content {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 16px;
+        left: 16px;
+        .mc-transtition();
+    }
+    .mc-btn-action {
+        position: absolute;
+        right: 16px;
+        top: 15px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        border: 5px solid;
+        width: 54px;
+        height: 54px;
+        line-height: 44px;
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+        z-index: 20;
+        .mc-transtition();
+    }
+    &.mc-active .mc-btn-action {
+        top: 62px;
+    }
+    .mc-description {
+        position: absolute;
+        top: 100%;
+        right: 30px;
+        left: 30px;
+        bottom: 54px;
+        overflow: hidden;
+        .opacity(0);
+        .mc-transtition(1.2s);
+    }
+    .mc-footer {
+        height: 0;
+        overflow: hidden;
+        .mc-transtition();
+        h4 {
+            position: absolute;
+            top: 200px;
+            left: 30px;
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            .mc-transtition(1.4s);
+        }
+        a {
+            display: block;
+            float: left;
+            position: relative;
+            width: 52px;
+            height: 52px;
+            margin-left: 5px;
+            margin-bottom: 15px;
+            font-size: 28px;
+            color: #fff;
+            line-height: 52px;
+            text-decoration: none;
+            top: 200px;
+            &:nth-child(1) {
+                .mc-transtition (.5s)
+            }
+            &:nth-child(2) {
+                .mc-transtition (.6s)
+            }
+            &:nth-child(3) {
+                .mc-transtition (.7s)
+            }
+            &:nth-child(4) {
+                .mc-transtition (.8s)
+            }
+            &:nth-child(5) {
+                .mc-transtition (.9s)
+            }
+        }
+    }
+    .img-container {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        .mc-transtition();
+    }
+    &.mc-active {
+        .img-container {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            left: 0;
+            top: 12px;
+            width: 60px;
+            height: 60px;
+            z-index: 20;
+        }
+        .mc-content {
+            padding-top: 5.6em;
+            @media screen and (max-width: 767px) {
+                position: relative;
+                margin-right: 16px;
+            }
+        }
+        .mc-description {
+            top: 50px;
+            padding-top: 5.6em;
+            .opacity(1);
+            @media screen and (max-width: 767px) {
+                position: relative;
+                top: auto;
+                right: auto;
+                left: auto;
+                padding: 50px 30px 70px 30px;
+                bottom: 0;
+            }
+        }
+        .mc-footer {
+            overflow: visible;
+            position: absolute;
+            top: calc(~'100% - 16px');
+            left: 16px;
+            right: 0;
+            height: 82px;
+            padding-top: 15px;
+            padding-left: 25px;
+            a {
+                top: 0;
+            }
+            h4 {
+                top: -32px;
+            }
+        }
+    }
+}
+
+@import "material-color.less";
