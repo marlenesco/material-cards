@@ -3,14 +3,21 @@
   "version": "1.0.0",
   "homepage": "https://github.com/marlenesco/material-cards",
   "authors": [
-    "David Foliti <marlenesco@gmail.com>"
+    "David Foliti <marlenesco@gmail.com> (https://twitter.com/marlenesco)"
   ],
   "description": "Card style based on Google Material color palette",
+  "main": [
+    "less/material-cards.less",
+    "js/jquery.material-cards"
+  ],
   "keywords": [
+    "Material cards",
+    "Material card",
+    "Google material card",
+    "Google Material",
     "Google",
     "Material",
-    "Google Material",
-    "Bootstrap",
+    "Bootstrap material",
     "Card",
     "Cards",
     "User card"
@@ -23,5 +30,9 @@
   "dependencies": {
     "jquery": "~1",
     "font-awesome": "~4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marlenesco/material-cards"
   }
 }
