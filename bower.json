@@ -1,14 +1,19 @@
 {
-  "name": "material-card",
+  "name": "material-cards",
   "version": "1.0.0",
-  "homepage": "https://github.com/marlenesco/material-card",
+  "homepage": "https://github.com/marlenesco/material-cards",
   "authors": [
     "David Foliti <marlenesco@gmail.com>"
   ],
   "description": "Card style based on Google Material color palette",
   "keywords": [
     "Google",
-    "Material"
+    "Material",
+    "Google Material",
+    "Bootstrap",
+    "Card",
+    "Cards",
+    "User card"
   ],
   "license": "MIT",
   "ignore": [

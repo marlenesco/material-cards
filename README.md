@@ -1,15 +1,15 @@
-Material Card
-=============
+Material Cards
+==============
 Simple user card based on [Google Material Color palette](https://www.google.com/design/spec/style/color.html#color-color-palette).
 
 Less files
--------------
-    material-card.less
+----------
+    material-cards.less
     gm-variables.less
     mixin.less
     material-color.less
  
-> `material-card.less` is the main `.less` file that includes the other .less files.  
+> `material-cards.less` is the main `.less` file that includes the other .less files.  
 > `gm-variables.less` contains all the [color palette](https://www.google.com/design/spec/style/color.html#color-color-palette) with the color accent.  
 > `mixin.less` contains some utilities.  
 > `material-color.less` contains the material color variant based on `gm-variables.less`
@@ -18,16 +18,16 @@ Usage
 ---------
 Yo can download full package and check the **demo** folder for implementation example or you can use **bower**:
 
-    bower install material-card
+    bower install material-cards
     
 Demo files require [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 
-Material Card jQuery plugin
+Material Cards jQuery plugin
 ------------------------------------
-You can use material card with a simple jQuery script (demo file located in **demo** folder).  
+You can use material cards with a simple jQuery script (demo file located in **demo** folder).  
 Or you can use the **jquery plugin** to manage **options**, **methods** and **events** for full customization.
 
-Check inside **js/** folder **jquery.material-card.js** or **jquery.material-card.min.js**
+Check inside **js/** folder **jquery.material-cards.js** or **jquery.material-cards.min.js**
 
 ### Init jquery material card
 
@@ -98,8 +98,8 @@ $('.material-card').on('shown.material-card', function (event) {
 ```
 
 ```javascript
-var fullCardEvent = 'shown.material-card show.material-card hide.material-card hidden.material-card';
-$('.material-card').on(fullCardEvent, function (event) {
+var fullCardEvent = 'shown.material-card show.material-card hide.material-cards hidden.material-cards';
+$('.material-cards').on(fullCardEvent, function (event) {
 	//   do something
 });
 ```

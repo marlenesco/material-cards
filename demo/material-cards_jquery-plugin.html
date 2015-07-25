@@ -6,11 +6,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="msapplication-tap-highlight" content="no">
 
-    <title>Material Card | Simple Demo</title>
+    <title>Material Cards | jQuery Plugin Demo</title>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../dist/material-card.css">
+    <link rel="stylesheet" href="../dist/material-cards.css">
     <style type="text/css">
 
         html {
@@ -35,8 +35,8 @@
 <body>
 <section class="container">
     <div class="page-header">
-        <h1>Material card<br>
-            <small>material card with a simple jquery script</small></h1>
+        <h1>Material cards with proper jquery plugin<br>
+            <small>jquery.material-cards.js allow you to manage options, events and method for your awesome cards</small></h1>
     </div>
     <div class="row active-with-click">
         <div class="col-md-4 col-sm-6 col-xs-12">
@@ -132,6 +132,8 @@
                 </div>
             </article>
         </div>
+    <!--</div>-->
+    <!--<div class="row active-with-hover">-->
         <div class="col-md-4 col-sm-6 col-xs-12">
             <article class="material-card Deep-Purple">
                 <h2>
@@ -632,35 +634,26 @@
 </section>
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery.material-cards.min.js"></script>
 <script>
     $(function() {
-        $('.material-card > .mc-btn-action').click(function () {
-            var card = $(this).parent('.material-card');
-            var icon = $(this).children('i');
-            icon.addClass('fa-spin-fast');
-
-            if (card.hasClass('mc-active')) {
-                card.removeClass('mc-active');
-
-                window.setTimeout(function() {
-                    icon
-                        .removeClass('fa-arrow-left')
-                        .removeClass('fa-spin-fast')
-                        .addClass('fa-bars');
-
-                }, 800);
-            } else {
-                card.addClass('mc-active');
-
-                window.setTimeout(function() {
-                    icon
-                        .removeClass('fa-bars')
-                        .removeClass('fa-spin-fast')
-                        .addClass('fa-arrow-left');
-
-                }, 800);
-            }
+        $('.material-card').materialCard({
+            icon_close: 'fa-chevron-left',
+            icon_open: 'fa-thumbs-o-up',
+            icon_spin: 'fa-spin-fast',
+            card_activator: 'click'
         });
+
+//        $('.active-with-click .material-card').materialCard();
+
+        window.setTimeout(function() {
+            $('.material-card:eq(1)').materialCard('open');
+        }, 2000);
+
+        $('.material-card').on('shown.material-card show.material-card hide.material-card hidden.material-card', function (event) {
+            console.log(event.type, event.namespace, $(this));
+        });
+
     });
 </script>
 </body>
