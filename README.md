@@ -2,7 +2,9 @@ Material Cards
 ==============
 Simple user card based on [Google Material Color palette](https://www.google.com/design/spec/style/color.html#color-color-palette).
 
-[![See full preview](https://dl.dropboxusercontent.com/u/2691310/github/material-card/card-preview.jpg)](https://dl.dropboxusercontent.com/u/2691310/github/material-card/card-full.jpg)
+[![See full preview](http://codepen.io/marlenesco/full/NqOozj/)](https://dl.dropboxusercontent.com/u/2691310/github/material-card/card-full.jpg)
+
+[Working demo on Codepen.io](http://codepen.io/marlenesco/full/NqOozj/)
 
 Less files
 ----------
