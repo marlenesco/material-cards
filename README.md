@@ -2,6 +2,8 @@ Material Cards
 ==============
 Simple user card based on [Google Material Color palette](https://www.google.com/design/spec/style/color.html#color-color-palette).
 
+[![See full preview](https://dl.dropboxusercontent.com/u/2691310/github/material-card/card-preview.jpg)](https://dl.dropboxusercontent.com/u/2691310/github/material-card/card-full.jpg)
+
 Less files
 ----------
     material-cards.less
@@ -35,8 +37,7 @@ Check inside **js/** folder **jquery.material-cards.js** or **jquery.material-ca
 $('.material-card').materialCard(options);
 ```
 
-Options
-----------
+### Options
 
 ```javascript
 options = {
@@ -47,12 +48,11 @@ options = {
 });
 ```
 
-The icons are from [Font Awesome](http://fortawesome.github.io/Font-Awesome/), `fa-spin-fast` is similar to [`fa-spin`](http://fortawesome.github.io/Font-Awesome/examples/#animated) but faster.  
+The icons are from [Font Awesome](http://fortawesome.github.io/Font-Awesome/), `fa-spin-fast` is similar to [`fa-spin`](http://fortawesome.github.io/Font-Awesome/examples/#animated) but spin faster.  
 
 The default **card_activator** is the **click** event on button card, but you can also use **hover** (this option remove the button).
 
-Methods
------------
+### Methods
 
 `toggle`: change selected material card state
 
@@ -80,8 +80,8 @@ if($('.material-card:eq(3)').materialCard('isOpen') === true) {
 }
 ```
 
-Events
----------
+### Events
+
 * `show.material-card`: triggered immediately when the **open** instance method is called
 * `shown.material-card`: triggered when the card becomes visible to the user (will wait the end of the CSS transitions)
 * `hide.material-card`: triggered immediately when the **close** instance method is called
