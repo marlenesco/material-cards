@@ -20,7 +20,7 @@ Less files
 
 Installation
 ----
-Yo can download full package and check the **demo** folder for implementation example or you can use **bower**:
+You can download full package and check the **demo** folder for implementation example or you can use **bower**:
 
     bower install material-cards
     
