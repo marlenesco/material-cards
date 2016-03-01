@@ -8,7 +8,7 @@
   "description": "Card style based on Google Material color palette",
   "main": [
     "less/material-cards.less",
-    "js/jquery.material-cards"
+    "js/jquery.material-cards.js"
   ],
   "keywords": [
     "Material cards",
