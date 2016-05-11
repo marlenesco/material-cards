@@ -106,3 +106,5 @@ $('.material-cards').on(fullCardEvent, function (event) {
 	//   do something
 });
 ```
+### Material cards and Masonry grid library
+check `demo/material-cards_jquery-plugin_masonry.html` material cards without a fixed height (use this lees file `less/material-cards-auto-height.less`) and awesome [javascript Masonry grid library](http://masonry.desandro.com/).
