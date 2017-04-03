@@ -2,7 +2,7 @@ Material Cards [![CodeHunt.io](https://img.shields.io/badge/vote-codehunt.io-02A
 ==============
 Simple user card based on [Google Material Color palette](https://www.google.com/design/spec/style/color.html#color-color-palette) and jQuery.
 
-[![See full preview](https://dl.dropboxusercontent.com/u/2691310/github/material-card/card-preview.jpg)](http://codepen.io/marlenesco/full/NqOozj/)
+[![See full preview](http://u.lorenzoferrara.net/marlenesco/material-card/card-preview.jpg)](http://codepen.io/marlenesco/full/NqOozj/)
 
 [Working demo on Codepen.io](http://codepen.io/marlenesco/full/NqOozj/)
 
