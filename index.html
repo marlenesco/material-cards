@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <title>Aventine Solutions | Matthew</title>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700' rel='stylesheet'
+        type='text/css'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./dist/material-cards-auto-height.css">
+  <style type="text/css">
+
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+
+    body {
+      background-color: #ECEFF1;
+      color: #37474F;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    h1, h2, h3 {
+      font-weight: 200;
+    }
+
+    .grid-item {
+      width: 390px;
+      padding: 15px;
+    }
+
+  </style>
+</head>
+<body>
+<section class="container">
+  <div class="page-header">
+    <h1>Aventine Solutions<br>
+      <small>Matthew Eichler</small>
+    </h1>
+  </div>
+  <div class="row active-with-click grid">
+    <div class="grid-item">
+      <article class="material-card Red">
+        <h2>
+          <span>Matthew Eichler</span>
+          <strong>
+            <i class="fa fa-fw fa-star"></i>
+            Full Stack Web Developer
+          </strong>
+        </h2>
+        <div class="mc-content">
+          <div class="img-container">
+            <img class="img-responsive"
+                 src="./images/Bitmoji_Side_Long_Glance_1722311379.png"/>
+          </div>
+          <div class="mc-description">
+            Freelance Full Stack Web Developer and Consultant specializing in agile web development and
+            leveraging more than 30 years of experience in IT for a wide variety of business domains.
+          </div>
+        </div>
+        <a class="mc-btn-action">
+          <i class="fa fa-bars"></i>
+        </a>
+        <div class="mc-footer">
+          <a class="fa fa-fw fa-linkedin" href="https://www.linkedin.com/in/aventinesolutions/" target="AventineSolutions-LinkedIn"></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="./js/jquery.material-cards.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script>
+  $(function () {
+
+    var $grid = $('.grid').masonry({
+      itemSelector: '.grid-item',
+      columnWidth: 390,
+    });
+
+    $('.material-card').materialCard();
+
+    $('.material-card').on('shown.material-card hidden.material-card', function (event) {
+      $grid.masonry();
+    });
+
+  });
+</script>
+</body>
+</html>
