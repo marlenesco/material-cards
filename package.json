@@ -3,7 +3,29 @@
   "version": "1.0.0",
   "description": "Aventine Solutions Material Cards Responsive Site 2017",
   "main": "index.js",
-  "repository": "git@github.com:aventinesolutions/aventine-responsive.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aventinesolutions/aventine-responsive.git"
+  },
   "author": "Matthew Eichler <matthew.eichler@aventinesolutions.nl>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "aventine",
+    "responsive",
+    "material",
+    "cards"
+  ],
+  "optionalDependencies": {
+    "fsevents": "^1.1.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "style-loader": "^0.16.1",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-webpack-plugin": "^0.7.0",
+    "webpack": "^2.4.1"
+  }
 }
