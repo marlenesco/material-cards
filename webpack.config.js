@@ -9,7 +9,11 @@ const extractCss = new ExtractTextPlugin(
     filename: 'material-cards-auto-height.css',
     disable: nodeEnv === 'development'
   });
-const linter = new StyleLinterPlugin({show: true});
+const linter = new StyleLinterPlugin(
+  {
+    show: true,
+    syntax: 'postcss-less'
+  });
 
 module.exports = {
   devtool: 'source-map',
@@ -48,6 +52,6 @@ module.exports = {
   },
   plugins: [
     extractCss,
-    linter
+    /* linter */
   ]
 };
