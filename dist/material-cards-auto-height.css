@@ -173,35 +173,35 @@
   text-decoration: none;
   top: 200px;
 }
-.material-card .mc-footer a:nth-child(1) {
+.material-card .mc-footer a:nth-of-type(1) {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.material-card .mc-footer a:nth-child(2) {
+.material-card .mc-footer a:nth-of-type(2) {
   -webkit-transition: all 0.6s;
   -moz-transition: all 0.6s;
   -ms-transition: all 0.6s;
   -o-transition: all 0.6s;
   transition: all 0.6s;
 }
-.material-card .mc-footer a:nth-child(3) {
+.material-card .mc-footer a:nth-of-type(3) {
   -webkit-transition: all 0.7s;
   -moz-transition: all 0.7s;
   -ms-transition: all 0.7s;
   -o-transition: all 0.7s;
   transition: all 0.7s;
 }
-.material-card .mc-footer a:nth-child(4) {
+.material-card .mc-footer a:nth-of-type(4) {
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
   -ms-transition: all 0.8s;
   -o-transition: all 0.8s;
   transition: all 0.8s;
 }
-.material-card .mc-footer a:nth-child(5) {
+.material-card .mc-footer a:nth-of-type(5) {
   -webkit-transition: all 0.9s;
   -moz-transition: all 0.9s;
   -ms-transition: all 0.9s;
@@ -1225,3 +1225,5 @@
 .material-card.Blue-Grey.mc-active .mc-btn-action {
   border-color: #ECEFF1;
 }
+
+/*# sourceMappingURL=material-cards-auto-height.css.map*/
