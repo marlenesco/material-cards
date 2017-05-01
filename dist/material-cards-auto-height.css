@@ -265,10 +265,10 @@
 .material-card.mc-active .mc-footer h4 {
   top: -32px;
 }
-.documents {
+.material-card .documents {
   margin-bottom: 0;
 }
-.documents a {
+.material-card .documents a {
   width: 5em;
   height: 52px;
   margin-left: 5px;
@@ -280,19 +280,23 @@
   text-align: left;
   padding-left: 1em;
 }
-.documents .pdf:after {
+.material-card .documents .pdf:after {
+  font-family: Raleway, sans-serif;
   content: ' pdf';
 }
-.documents .doc:after {
+.material-card .documents .doc:after {
+  font-family: Raleway, sans-serif;
   content: ' doc';
 }
-.documents .docx:after {
+.material-card .documents .docx:after {
+  font-family: Raleway, sans-serif;
   content: ' docx';
 }
-.documents .odt:after {
+.material-card .documents .odt:after {
+  font-family: Raleway, sans-serif;
   content: ' odt';
 }
-.documents li {
+.material-card .documents li {
   list-style: none;
 }
 .material-card.Red h2 {
