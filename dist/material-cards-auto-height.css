@@ -222,6 +222,9 @@
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+.material-card .img-scaleup {
+  width: 150%;
+}
 .material-card.mc-active .img-container {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
