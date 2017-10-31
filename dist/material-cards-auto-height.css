@@ -224,6 +224,7 @@
 }
 .material-card .img-scaleup {
   width: 150%;
+  height: 105%;
 }
 .material-card.mc-active .img-container {
   -webkit-border-radius: 50%;
