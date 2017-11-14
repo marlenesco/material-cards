@@ -301,18 +301,12 @@
 <script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 <script>
   $(function () {
-
-    var $grid = $('.grid').masonry({
-      itemSelector: '.grid-item',
-      columnWidth: 390,
+    $('.material-card').materialCard().on('shown.material-card hidden.material-card', function (event) {
+      $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 390
+      });
     });
-
-    $('.material-card').materialCard();
-
-    $('.material-card').on('shown.material-card hidden.material-card', function (event) {
-      $grid.masonry();
-    });
-
   });
 </script>
 </body>
