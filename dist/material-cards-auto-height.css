@@ -1303,5 +1303,15 @@
 .material-card.Blue-Grey.mc-active .mc-btn-action {
   border-color: #ECEFF1;
 }
+.material-card.Yellow h2,
+.material-card.Amber h2 {
+  color: black;
+}
+.material-card.Yellow i.fa-bars,
+.material-card.Amber i.fa-bars,
+.material-card.Yellow i.fa-arrow-left,
+.material-card.Amber i.fa-arrow-left {
+  color: black;
+}
 
 /*# sourceMappingURL=material-cards-auto-height.css.map*/
