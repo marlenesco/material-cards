@@ -1,0 +1,4 @@
+folders:
+  js: public_html/js
+  dist: public_html/dist
+  images: public_html/images
