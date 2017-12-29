@@ -67,6 +67,7 @@ class Deployer
   end
 
   def run
+    reset
     # Remove all files
     begin
       ftp_client.delete(home_page)
@@ -81,7 +82,7 @@ class Deployer
     end
 
     # Copy files placed in public directory
-    ftp_client.chdir(remote_home)
+    reset
     puts 'copying home page to remote server'
     ftp_client.putbinaryfile(home_page, home_page)
     folders.each do |local, remote|
@@ -98,6 +99,10 @@ class Deployer
   private
 
   attr_reader :remote_home, :home_page, :folders, :ftp_client
+
+  def reset
+    ftp_client.chdir(remote_home)
+  end
 end
 
 desc 'check environment'
