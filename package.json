@@ -30,6 +30,7 @@
     "webpack": "^2.4.1"
   },
   "scripts": {
-    "build": "webpack --progress --watch"
+    "build": "webpack --progress --watch",
+    "build-once": "webpack --progress"
   }
 }
