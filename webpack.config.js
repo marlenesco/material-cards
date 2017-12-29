@@ -16,10 +16,11 @@ const googleFonts = new GoogleFontsPlugin(
       { family: "Raleway", variants: ["400", "300", "200", "500", "600", "700"] }
     ]
   });
-const linter = new StyleLinterPlugin(
+const styleLinter = new StyleLinterPlugin(
   {
     show: true,
-    syntax: 'postcss-less'
+    syntax: 'less',
+    files: ['**/*.less']
   });
 
 module.exports = {
@@ -59,8 +60,7 @@ module.exports = {
   },
   plugins: [
     extractCss,
-    googleFonts
-    /* LESS/CSS linter */
-
+    googleFonts,
+    styleLinter
   ]
 };
