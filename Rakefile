@@ -109,7 +109,7 @@ class Deployer
     reset
     folders.each do |local, remote|
       ftp_client.chdir(remote)
-      Pathname.glob(local + "/*").each do |entry|
+      Pathname.glob(Pathname(local).join('*')).each do |entry|
         ftp_client.copy_recursive(entry, local + "/")
       end
     end
