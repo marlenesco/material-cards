@@ -67,26 +67,10 @@ class Deployer
   end
 
   def run
-    # Remove all files
     remove_home_page
-    reset
-    folders.each do |_, remote|
-      ftp_client.chdir(remote)
-      ftp_client.list.each do |entry|
-        ftp_client.delete_recursive(entry)
-      end
-    end
-
-    # Copy files placed in public directory
+    clean_folders
     deploy_home_page
-    reset
-    folders.each do |local, remote|
-      ftp_client.chdir(remote)
-      Pathname.glob(local + "/*").each do |entry|
-        ftp_client.copy_recursive(entry, local + "/")
-      end
-    end
-
+    deploy_folders
   ensure
     ftp_client.ftp.close
   end
@@ -109,6 +93,26 @@ class Deployer
     reset
     puts 'deploying home page to remote server'
     ftp_client.putbinaryfile(home_page, home_page)
+  end
+
+  def clean_folders
+    reset
+    folders.each do |_, remote|
+      ftp_client.chdir(remote)
+      ftp_client.list.each do |entry|
+        ftp_client.delete_recursive(entry)
+      end
+    end
+  end
+
+  def deploy_folders
+    reset
+    folders.each do |local, remote|
+      ftp_client.chdir(remote)
+      Pathname.glob(local + "/*").each do |entry|
+        ftp_client.copy_recursive(entry, local + "/")
+      end
+    end
   end
 end
 
