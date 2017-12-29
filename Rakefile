@@ -58,17 +58,22 @@ class FTPClient
 end
 
 class Deployer
-  def self.run(mappings)
-    ftp_client = FTPClient.new($spec['remote_home'])
+  def initialize(spec)
+    @remote_home = spec['remote_home']
+    @home_page = spec['home_page']
+    @folders = spec['folders']
+    @ftp_client = FTPClient.new(remote_home)
     ftp_client.connect
+  end
 
+  def run
     # Remove all files
     begin
-      ftp_client.delete($spec['home_page'])
+      ftp_client.delete(home_page)
     rescue Net::FTPPermError
       puts 'home page does not exist yet on server'
     end
-    mappings.each do |_, remote|
+    folders.each do |_, remote|
       ftp_client.chdir(remote)
       ftp_client.list.each do |entry|
         ftp_client.delete_recursive(entry)
@@ -76,10 +81,10 @@ class Deployer
     end
 
     # Copy files placed in public directory
-    ftp_client.chdir($spec['remote_home'])
+    ftp_client.chdir(remote_home)
     puts 'copying home page to remote server'
-    ftp_client.putbinaryfile($spec['home_page'], $spec['home_page'])
-    mappings.each do |local, remote|
+    ftp_client.putbinaryfile(home_page, home_page)
+    folders.each do |local, remote|
       ftp_client.chdir(remote)
       Pathname.glob(local + "/*").each do |entry|
         ftp_client.copy_recursive(entry, local + "/")
@@ -89,6 +94,10 @@ class Deployer
   ensure
     ftp_client.ftp.close
   end
+
+  private
+
+  attr_reader :remote_home, :home_page, :folders, :ftp_client
 end
 
 desc 'check environment'
@@ -115,7 +124,7 @@ end
 
 desc 'deploy the specified local files to the remote server'
 task :deploy do
-  Deployer.run($spec['folders'])
+  Deployer.new($spec).run
 end
 
 desc 'default: deploy local files to remote server after compiling'
