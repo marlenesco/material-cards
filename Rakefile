@@ -3,6 +3,7 @@ require 'net/ftp'
 require 'yaml'
 require 'pathname'
 require 'forwardable'
+require 'awesome_print'
 
 class FTPClient
   extend Forwardable
@@ -135,7 +136,7 @@ end
 
 desc 'read deployment specifications'
 task :spec do
-  $spec = YAML.load_file('deploy.yml')
+  ap $spec = YAML.load_file('deploy.yml')
 end
 
 desc 'deploy the specified local files to the remote server'

@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    awesome_print (1.8.0)
     dotenv (2.2.1)
     rake (12.3.0)
 
@@ -8,6 +9,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print (~> 1.8)
   dotenv (~> 2.2)
   rake (~> 12.0)
 
