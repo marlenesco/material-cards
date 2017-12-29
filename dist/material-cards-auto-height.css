@@ -119,7 +119,7 @@
   transition: all 0.3s;
 }
 .material-card.mc-active .mc-btn-action {
-  top: 62px;
+  top: 82px;
 }
 .material-card .mc-description {
   position: absolute;
@@ -173,35 +173,35 @@
   text-decoration: none;
   top: 200px;
 }
-.material-card .mc-footer a:nth-child(1) {
+.material-card .mc-footer a:nth-of-type(1) {
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.material-card .mc-footer a:nth-child(2) {
+.material-card .mc-footer a:nth-of-type(2) {
   -webkit-transition: all 0.6s;
   -moz-transition: all 0.6s;
   -ms-transition: all 0.6s;
   -o-transition: all 0.6s;
   transition: all 0.6s;
 }
-.material-card .mc-footer a:nth-child(3) {
+.material-card .mc-footer a:nth-of-type(3) {
   -webkit-transition: all 0.7s;
   -moz-transition: all 0.7s;
   -ms-transition: all 0.7s;
   -o-transition: all 0.7s;
   transition: all 0.7s;
 }
-.material-card .mc-footer a:nth-child(4) {
+.material-card .mc-footer a:nth-of-type(4) {
   -webkit-transition: all 0.8s;
   -moz-transition: all 0.8s;
   -ms-transition: all 0.8s;
   -o-transition: all 0.8s;
   transition: all 0.8s;
 }
-.material-card .mc-footer a:nth-child(5) {
+.material-card .mc-footer a:nth-of-type(5) {
   -webkit-transition: all 0.9s;
   -moz-transition: all 0.9s;
   -ms-transition: all 0.9s;
@@ -221,6 +221,10 @@
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+.material-card .img-scaleup {
+  width: 150%;
+  height: 105%;
 }
 .material-card.mc-active .img-container {
   -webkit-border-radius: 50%;
@@ -265,6 +269,40 @@
 .material-card.mc-active .mc-footer h4 {
   top: -32px;
 }
+.material-card .documents {
+  margin-bottom: 0;
+}
+.material-card .documents a {
+  width: 5em;
+  height: 52px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #fff;
+  line-height: 52px;
+  text-decoration: none;
+  text-align: left;
+  padding-left: 1em;
+}
+.material-card .documents .pdf:after {
+  font-family: Raleway, sans-serif;
+  content: ' pdf';
+}
+.material-card .documents .doc:after {
+  font-family: Raleway, sans-serif;
+  content: ' doc';
+}
+.material-card .documents .docx:after {
+  font-family: Raleway, sans-serif;
+  content: ' docx';
+}
+.material-card .documents .odt:after {
+  font-family: Raleway, sans-serif;
+  content: ' odt';
+}
+.material-card .documents li {
+  list-style: none;
+}
 .material-card.Red h2 {
   background-color: #F44336;
 }
@@ -298,10 +336,12 @@
 .material-card.Red .mc-btn-action:hover {
   background-color: #B71C1C;
 }
-.material-card.Red .mc-footer h4 {
+.material-card.Red .mc-footer h4,
+.material-card.Red .documents h4 {
   color: #B71C1C;
 }
-.material-card.Red .mc-footer a {
+.material-card.Red .mc-footer a,
+.material-card.Red .documents a {
   background-color: #B71C1C;
 }
 .material-card.Red.mc-active .mc-content {
@@ -346,10 +386,12 @@
 .material-card.Blue-Grey .mc-btn-action:hover {
   background-color: #263238;
 }
-.material-card.Blue-Grey .mc-footer h4 {
+.material-card.Blue-Grey .mc-footer h4,
+.material-card.Blue-Grey .documents h4 {
   color: #263238;
 }
-.material-card.Blue-Grey .mc-footer a {
+.material-card.Blue-Grey .mc-footer a,
+.material-card.Blue-Grey .documents a {
   background-color: #263238;
 }
 .material-card.Blue-Grey.mc-active .mc-content {
@@ -394,10 +436,12 @@
 .material-card.Pink .mc-btn-action:hover {
   background-color: #880E4F;
 }
-.material-card.Pink .mc-footer h4 {
+.material-card.Pink .mc-footer h4,
+.material-card.Pink .documents h4 {
   color: #880E4F;
 }
-.material-card.Pink .mc-footer a {
+.material-card.Pink .mc-footer a,
+.material-card.Pink .documents a {
   background-color: #880E4F;
 }
 .material-card.Pink.mc-active .mc-content {
@@ -442,10 +486,12 @@
 .material-card.Purple .mc-btn-action:hover {
   background-color: #4A148C;
 }
-.material-card.Purple .mc-footer h4 {
+.material-card.Purple .mc-footer h4,
+.material-card.Purple .documents h4 {
   color: #4A148C;
 }
-.material-card.Purple .mc-footer a {
+.material-card.Purple .mc-footer a,
+.material-card.Purple .documents a {
   background-color: #4A148C;
 }
 .material-card.Purple.mc-active .mc-content {
@@ -490,10 +536,12 @@
 .material-card.Deep-Purple .mc-btn-action:hover {
   background-color: #311B92;
 }
-.material-card.Deep-Purple .mc-footer h4 {
+.material-card.Deep-Purple .mc-footer h4,
+.material-card.Deep-Purple .documents h4 {
   color: #311B92;
 }
-.material-card.Deep-Purple .mc-footer a {
+.material-card.Deep-Purple .mc-footer a,
+.material-card.Deep-Purple .documents a {
   background-color: #311B92;
 }
 .material-card.Deep-Purple.mc-active .mc-content {
@@ -538,10 +586,12 @@
 .material-card.Indigo .mc-btn-action:hover {
   background-color: #1A237E;
 }
-.material-card.Indigo .mc-footer h4 {
+.material-card.Indigo .mc-footer h4,
+.material-card.Indigo .documents h4 {
   color: #1A237E;
 }
-.material-card.Indigo .mc-footer a {
+.material-card.Indigo .mc-footer a,
+.material-card.Indigo .documents a {
   background-color: #1A237E;
 }
 .material-card.Indigo.mc-active .mc-content {
@@ -586,10 +636,12 @@
 .material-card.Blue .mc-btn-action:hover {
   background-color: #0D47A1;
 }
-.material-card.Blue .mc-footer h4 {
+.material-card.Blue .mc-footer h4,
+.material-card.Blue .documents h4 {
   color: #0D47A1;
 }
-.material-card.Blue .mc-footer a {
+.material-card.Blue .mc-footer a,
+.material-card.Blue .documents a {
   background-color: #0D47A1;
 }
 .material-card.Blue.mc-active .mc-content {
@@ -634,10 +686,12 @@
 .material-card.Light-Blue .mc-btn-action:hover {
   background-color: #01579B;
 }
-.material-card.Light-Blue .mc-footer h4 {
+.material-card.Light-Blue .mc-footer h4,
+.material-card.Light-Blue .documents h4 {
   color: #01579B;
 }
-.material-card.Light-Blue .mc-footer a {
+.material-card.Light-Blue .mc-footer a,
+.material-card.Light-Blue .documents a {
   background-color: #01579B;
 }
 .material-card.Light-Blue.mc-active .mc-content {
@@ -682,10 +736,12 @@
 .material-card.Cyan .mc-btn-action:hover {
   background-color: #006064;
 }
-.material-card.Cyan .mc-footer h4 {
+.material-card.Cyan .mc-footer h4,
+.material-card.Cyan .documents h4 {
   color: #006064;
 }
-.material-card.Cyan .mc-footer a {
+.material-card.Cyan .mc-footer a,
+.material-card.Cyan .documents a {
   background-color: #006064;
 }
 .material-card.Cyan.mc-active .mc-content {
@@ -730,10 +786,12 @@
 .material-card.Teal .mc-btn-action:hover {
   background-color: #004D40;
 }
-.material-card.Teal .mc-footer h4 {
+.material-card.Teal .mc-footer h4,
+.material-card.Teal .documents h4 {
   color: #004D40;
 }
-.material-card.Teal .mc-footer a {
+.material-card.Teal .mc-footer a,
+.material-card.Teal .documents a {
   background-color: #004D40;
 }
 .material-card.Teal.mc-active .mc-content {
@@ -778,10 +836,12 @@
 .material-card.Green .mc-btn-action:hover {
   background-color: #1B5E20;
 }
-.material-card.Green .mc-footer h4 {
+.material-card.Green .mc-footer h4,
+.material-card.Green .documents h4 {
   color: #1B5E20;
 }
-.material-card.Green .mc-footer a {
+.material-card.Green .mc-footer a,
+.material-card.Green .documents a {
   background-color: #1B5E20;
 }
 .material-card.Green.mc-active .mc-content {
@@ -826,10 +886,12 @@
 .material-card.Light-Green .mc-btn-action:hover {
   background-color: #33691E;
 }
-.material-card.Light-Green .mc-footer h4 {
+.material-card.Light-Green .mc-footer h4,
+.material-card.Light-Green .documents h4 {
   color: #33691E;
 }
-.material-card.Light-Green .mc-footer a {
+.material-card.Light-Green .mc-footer a,
+.material-card.Light-Green .documents a {
   background-color: #33691E;
 }
 .material-card.Light-Green.mc-active .mc-content {
@@ -874,10 +936,12 @@
 .material-card.Lime .mc-btn-action:hover {
   background-color: #827717;
 }
-.material-card.Lime .mc-footer h4 {
+.material-card.Lime .mc-footer h4,
+.material-card.Lime .documents h4 {
   color: #827717;
 }
-.material-card.Lime .mc-footer a {
+.material-card.Lime .mc-footer a,
+.material-card.Lime .documents a {
   background-color: #827717;
 }
 .material-card.Lime.mc-active .mc-content {
@@ -922,10 +986,12 @@
 .material-card.Yellow .mc-btn-action:hover {
   background-color: #F57F17;
 }
-.material-card.Yellow .mc-footer h4 {
+.material-card.Yellow .mc-footer h4,
+.material-card.Yellow .documents h4 {
   color: #F57F17;
 }
-.material-card.Yellow .mc-footer a {
+.material-card.Yellow .mc-footer a,
+.material-card.Yellow .documents a {
   background-color: #F57F17;
 }
 .material-card.Yellow.mc-active .mc-content {
@@ -970,10 +1036,12 @@
 .material-card.Amber .mc-btn-action:hover {
   background-color: #FF6F00;
 }
-.material-card.Amber .mc-footer h4 {
+.material-card.Amber .mc-footer h4,
+.material-card.Amber .documents h4 {
   color: #FF6F00;
 }
-.material-card.Amber .mc-footer a {
+.material-card.Amber .mc-footer a,
+.material-card.Amber .documents a {
   background-color: #FF6F00;
 }
 .material-card.Amber.mc-active .mc-content {
@@ -1018,10 +1086,12 @@
 .material-card.Orange .mc-btn-action:hover {
   background-color: #E65100;
 }
-.material-card.Orange .mc-footer h4 {
+.material-card.Orange .mc-footer h4,
+.material-card.Orange .documents h4 {
   color: #E65100;
 }
-.material-card.Orange .mc-footer a {
+.material-card.Orange .mc-footer a,
+.material-card.Orange .documents a {
   background-color: #E65100;
 }
 .material-card.Orange.mc-active .mc-content {
@@ -1066,10 +1136,12 @@
 .material-card.Deep-Orange .mc-btn-action:hover {
   background-color: #BF360C;
 }
-.material-card.Deep-Orange .mc-footer h4 {
+.material-card.Deep-Orange .mc-footer h4,
+.material-card.Deep-Orange .documents h4 {
   color: #BF360C;
 }
-.material-card.Deep-Orange .mc-footer a {
+.material-card.Deep-Orange .mc-footer a,
+.material-card.Deep-Orange .documents a {
   background-color: #BF360C;
 }
 .material-card.Deep-Orange.mc-active .mc-content {
@@ -1114,10 +1186,12 @@
 .material-card.Brown .mc-btn-action:hover {
   background-color: #3E2723;
 }
-.material-card.Brown .mc-footer h4 {
+.material-card.Brown .mc-footer h4,
+.material-card.Brown .documents h4 {
   color: #3E2723;
 }
-.material-card.Brown .mc-footer a {
+.material-card.Brown .mc-footer a,
+.material-card.Brown .documents a {
   background-color: #3E2723;
 }
 .material-card.Brown.mc-active .mc-content {
@@ -1162,10 +1236,12 @@
 .material-card.Grey .mc-btn-action:hover {
   background-color: #212121;
 }
-.material-card.Grey .mc-footer h4 {
+.material-card.Grey .mc-footer h4,
+.material-card.Grey .documents h4 {
   color: #212121;
 }
-.material-card.Grey .mc-footer a {
+.material-card.Grey .mc-footer a,
+.material-card.Grey .documents a {
   background-color: #212121;
 }
 .material-card.Grey.mc-active .mc-content {
@@ -1210,10 +1286,12 @@
 .material-card.Blue-Grey .mc-btn-action:hover {
   background-color: #263238;
 }
-.material-card.Blue-Grey .mc-footer h4 {
+.material-card.Blue-Grey .mc-footer h4,
+.material-card.Blue-Grey .documents h4 {
   color: #263238;
 }
-.material-card.Blue-Grey .mc-footer a {
+.material-card.Blue-Grey .mc-footer a,
+.material-card.Blue-Grey .documents a {
   background-color: #263238;
 }
 .material-card.Blue-Grey.mc-active .mc-content {
@@ -1225,3 +1303,15 @@
 .material-card.Blue-Grey.mc-active .mc-btn-action {
   border-color: #ECEFF1;
 }
+.material-card.Yellow h2,
+.material-card.Amber h2 {
+  color: black;
+}
+.material-card.Yellow i.fa-bars,
+.material-card.Amber i.fa-bars,
+.material-card.Yellow i.fa-arrow-left,
+.material-card.Amber i.fa-arrow-left {
+  color: black;
+}
+
+/*# sourceMappingURL=material-cards-auto-height.css.map*/
