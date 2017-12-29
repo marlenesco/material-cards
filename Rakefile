@@ -59,9 +59,9 @@ end
 
 class Deployer
   def initialize(spec)
-    @remote_home = spec['remote_home']
-    @home_page = spec['home_page']
-    @folders = spec['folders']
+    %w(remote_home home_page folders).each do |attr|
+      instance_variable_set("@#{attr}".to_sym, spec[attr])
+    end
     @ftp_client = FTPClient.new(remote_home)
     ftp_client.connect
   end
