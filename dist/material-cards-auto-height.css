@@ -34,7 +34,7 @@
   left: 0;
   width: 100%;
   padding: 10px 16px;
-  color: #fff;
+  color: #FFF;
   font-size: 1.4em;
   line-height: 1.6em;
   margin: 0;
@@ -51,10 +51,10 @@
 .material-card h2 strong {
   font-weight: 400;
   display: block;
-  font-size: .8em;
+  font-size: 0.8em;
 }
-.material-card h2:before,
-.material-card h2:after {
+.material-card h2::before,
+.material-card h2::after {
   content: ' ';
   position: absolute;
   left: 0;
@@ -67,7 +67,7 @@
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.material-card h2:after {
+.material-card h2::after {
   top: auto;
   bottom: 0;
 }
@@ -79,10 +79,10 @@
   top: 0;
   padding: 10px 16px 10px 90px;
 }
-.material-card.mc-active h2:before {
+.material-card.mc-active h2::before {
   top: 0;
 }
-.material-card.mc-active h2:after {
+.material-card.mc-active h2::after {
   bottom: -16px;
 }
 .material-card .mc-content {
@@ -109,7 +109,7 @@
   height: 54px;
   line-height: 44px;
   text-align: center;
-  color: #fff;
+  color: #FFF;
   cursor: pointer;
   z-index: 20;
   -webkit-transition: all 0.3s;
@@ -168,7 +168,7 @@
   margin-left: 5px;
   margin-bottom: 15px;
   font-size: 28px;
-  color: #fff;
+  color: #FFF;
   line-height: 52px;
   text-decoration: none;
   top: 200px;
@@ -242,15 +242,13 @@
   margin-right: 16px;
 }
 .material-card.mc-active .mc-description {
-  top: 50px;
-  padding-top: 5.6em;
   opacity: 1;
   filter: alpha(opacity=100);
   position: relative;
   top: auto;
   right: auto;
   left: auto;
-  padding: 50px 30px 70px 30px;
+  padding: 50px 30px 70px;
   bottom: 0;
 }
 .material-card.mc-active .mc-footer {
@@ -278,25 +276,25 @@
   margin-left: 5px;
   margin-bottom: 15px;
   font-size: 28px;
-  color: #fff;
+  color: #FFF;
   line-height: 52px;
   text-decoration: none;
   text-align: left;
   padding-left: 1em;
 }
-.material-card .documents .pdf:after {
+.material-card .documents .pdf::after {
   font-family: Raleway, sans-serif;
   content: ' pdf';
 }
-.material-card .documents .doc:after {
+.material-card .documents .doc::after {
   font-family: Raleway, sans-serif;
   content: ' doc';
 }
-.material-card .documents .docx:after {
+.material-card .documents .docx::after {
   font-family: Raleway, sans-serif;
   content: ' docx';
 }
-.material-card .documents .odt:after {
+.material-card .documents .odt::after {
   font-family: Raleway, sans-serif;
   content: ' odt';
 }
@@ -306,25 +304,25 @@
 .material-card.Red h2 {
   background-color: #F44336;
 }
-.material-card.Red h2:after {
+.material-card.Red h2::after {
   border-top-color: #F44336;
   border-right-color: #F44336;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Red h2:before {
+.material-card.Red h2::before {
   border-top-color: transparent;
   border-right-color: #B71C1C;
   border-bottom-color: #B71C1C;
   border-left-color: transparent;
 }
-.material-card.Red.mc-active h2:before {
+.material-card.Red.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #F44336;
   border-bottom-color: #F44336;
   border-left-color: transparent;
 }
-.material-card.Red.mc-active h2:after {
+.material-card.Red.mc-active h2::after {
   border-top-color: #B71C1C;
   border-right-color: #B71C1C;
   border-bottom-color: transparent;
@@ -356,25 +354,25 @@
 .material-card.Blue-Grey h2 {
   background-color: #607D8B;
 }
-.material-card.Blue-Grey h2:after {
+.material-card.Blue-Grey h2::after {
   border-top-color: #607D8B;
   border-right-color: #607D8B;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Blue-Grey h2:before {
+.material-card.Blue-Grey h2::before {
   border-top-color: transparent;
   border-right-color: #263238;
   border-bottom-color: #263238;
   border-left-color: transparent;
 }
-.material-card.Blue-Grey.mc-active h2:before {
+.material-card.Blue-Grey.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #607D8B;
   border-bottom-color: #607D8B;
   border-left-color: transparent;
 }
-.material-card.Blue-Grey.mc-active h2:after {
+.material-card.Blue-Grey.mc-active h2::after {
   border-top-color: #263238;
   border-right-color: #263238;
   border-bottom-color: transparent;
@@ -406,25 +404,25 @@
 .material-card.Pink h2 {
   background-color: #E91E63;
 }
-.material-card.Pink h2:after {
+.material-card.Pink h2::after {
   border-top-color: #E91E63;
   border-right-color: #E91E63;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Pink h2:before {
+.material-card.Pink h2::before {
   border-top-color: transparent;
   border-right-color: #880E4F;
   border-bottom-color: #880E4F;
   border-left-color: transparent;
 }
-.material-card.Pink.mc-active h2:before {
+.material-card.Pink.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #E91E63;
   border-bottom-color: #E91E63;
   border-left-color: transparent;
 }
-.material-card.Pink.mc-active h2:after {
+.material-card.Pink.mc-active h2::after {
   border-top-color: #880E4F;
   border-right-color: #880E4F;
   border-bottom-color: transparent;
@@ -456,25 +454,25 @@
 .material-card.Purple h2 {
   background-color: #9C27B0;
 }
-.material-card.Purple h2:after {
+.material-card.Purple h2::after {
   border-top-color: #9C27B0;
   border-right-color: #9C27B0;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Purple h2:before {
+.material-card.Purple h2::before {
   border-top-color: transparent;
   border-right-color: #4A148C;
   border-bottom-color: #4A148C;
   border-left-color: transparent;
 }
-.material-card.Purple.mc-active h2:before {
+.material-card.Purple.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #9C27B0;
   border-bottom-color: #9C27B0;
   border-left-color: transparent;
 }
-.material-card.Purple.mc-active h2:after {
+.material-card.Purple.mc-active h2::after {
   border-top-color: #4A148C;
   border-right-color: #4A148C;
   border-bottom-color: transparent;
@@ -506,25 +504,25 @@
 .material-card.Deep-Purple h2 {
   background-color: #673AB7;
 }
-.material-card.Deep-Purple h2:after {
+.material-card.Deep-Purple h2::after {
   border-top-color: #673AB7;
   border-right-color: #673AB7;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Deep-Purple h2:before {
+.material-card.Deep-Purple h2::before {
   border-top-color: transparent;
   border-right-color: #311B92;
   border-bottom-color: #311B92;
   border-left-color: transparent;
 }
-.material-card.Deep-Purple.mc-active h2:before {
+.material-card.Deep-Purple.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #673AB7;
   border-bottom-color: #673AB7;
   border-left-color: transparent;
 }
-.material-card.Deep-Purple.mc-active h2:after {
+.material-card.Deep-Purple.mc-active h2::after {
   border-top-color: #311B92;
   border-right-color: #311B92;
   border-bottom-color: transparent;
@@ -556,25 +554,25 @@
 .material-card.Indigo h2 {
   background-color: #3F51B5;
 }
-.material-card.Indigo h2:after {
+.material-card.Indigo h2::after {
   border-top-color: #3F51B5;
   border-right-color: #3F51B5;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Indigo h2:before {
+.material-card.Indigo h2::before {
   border-top-color: transparent;
   border-right-color: #1A237E;
   border-bottom-color: #1A237E;
   border-left-color: transparent;
 }
-.material-card.Indigo.mc-active h2:before {
+.material-card.Indigo.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #3F51B5;
   border-bottom-color: #3F51B5;
   border-left-color: transparent;
 }
-.material-card.Indigo.mc-active h2:after {
+.material-card.Indigo.mc-active h2::after {
   border-top-color: #1A237E;
   border-right-color: #1A237E;
   border-bottom-color: transparent;
@@ -606,25 +604,25 @@
 .material-card.Blue h2 {
   background-color: #2196F3;
 }
-.material-card.Blue h2:after {
+.material-card.Blue h2::after {
   border-top-color: #2196F3;
   border-right-color: #2196F3;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Blue h2:before {
+.material-card.Blue h2::before {
   border-top-color: transparent;
   border-right-color: #0D47A1;
   border-bottom-color: #0D47A1;
   border-left-color: transparent;
 }
-.material-card.Blue.mc-active h2:before {
+.material-card.Blue.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #2196F3;
   border-bottom-color: #2196F3;
   border-left-color: transparent;
 }
-.material-card.Blue.mc-active h2:after {
+.material-card.Blue.mc-active h2::after {
   border-top-color: #0D47A1;
   border-right-color: #0D47A1;
   border-bottom-color: transparent;
@@ -656,25 +654,25 @@
 .material-card.Light-Blue h2 {
   background-color: #03A9F4;
 }
-.material-card.Light-Blue h2:after {
+.material-card.Light-Blue h2::after {
   border-top-color: #03A9F4;
   border-right-color: #03A9F4;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Light-Blue h2:before {
+.material-card.Light-Blue h2::before {
   border-top-color: transparent;
   border-right-color: #01579B;
   border-bottom-color: #01579B;
   border-left-color: transparent;
 }
-.material-card.Light-Blue.mc-active h2:before {
+.material-card.Light-Blue.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #03A9F4;
   border-bottom-color: #03A9F4;
   border-left-color: transparent;
 }
-.material-card.Light-Blue.mc-active h2:after {
+.material-card.Light-Blue.mc-active h2::after {
   border-top-color: #01579B;
   border-right-color: #01579B;
   border-bottom-color: transparent;
@@ -706,25 +704,25 @@
 .material-card.Cyan h2 {
   background-color: #00BCD4;
 }
-.material-card.Cyan h2:after {
+.material-card.Cyan h2::after {
   border-top-color: #00BCD4;
   border-right-color: #00BCD4;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Cyan h2:before {
+.material-card.Cyan h2::before {
   border-top-color: transparent;
   border-right-color: #006064;
   border-bottom-color: #006064;
   border-left-color: transparent;
 }
-.material-card.Cyan.mc-active h2:before {
+.material-card.Cyan.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #00BCD4;
   border-bottom-color: #00BCD4;
   border-left-color: transparent;
 }
-.material-card.Cyan.mc-active h2:after {
+.material-card.Cyan.mc-active h2::after {
   border-top-color: #006064;
   border-right-color: #006064;
   border-bottom-color: transparent;
@@ -756,25 +754,25 @@
 .material-card.Teal h2 {
   background-color: #009688;
 }
-.material-card.Teal h2:after {
+.material-card.Teal h2::after {
   border-top-color: #009688;
   border-right-color: #009688;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Teal h2:before {
+.material-card.Teal h2::before {
   border-top-color: transparent;
   border-right-color: #004D40;
   border-bottom-color: #004D40;
   border-left-color: transparent;
 }
-.material-card.Teal.mc-active h2:before {
+.material-card.Teal.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #009688;
   border-bottom-color: #009688;
   border-left-color: transparent;
 }
-.material-card.Teal.mc-active h2:after {
+.material-card.Teal.mc-active h2::after {
   border-top-color: #004D40;
   border-right-color: #004D40;
   border-bottom-color: transparent;
@@ -806,25 +804,25 @@
 .material-card.Green h2 {
   background-color: #4CAF50;
 }
-.material-card.Green h2:after {
+.material-card.Green h2::after {
   border-top-color: #4CAF50;
   border-right-color: #4CAF50;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Green h2:before {
+.material-card.Green h2::before {
   border-top-color: transparent;
   border-right-color: #1B5E20;
   border-bottom-color: #1B5E20;
   border-left-color: transparent;
 }
-.material-card.Green.mc-active h2:before {
+.material-card.Green.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #4CAF50;
   border-bottom-color: #4CAF50;
   border-left-color: transparent;
 }
-.material-card.Green.mc-active h2:after {
+.material-card.Green.mc-active h2::after {
   border-top-color: #1B5E20;
   border-right-color: #1B5E20;
   border-bottom-color: transparent;
@@ -856,25 +854,25 @@
 .material-card.Light-Green h2 {
   background-color: #8BC34A;
 }
-.material-card.Light-Green h2:after {
+.material-card.Light-Green h2::after {
   border-top-color: #8BC34A;
   border-right-color: #8BC34A;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Light-Green h2:before {
+.material-card.Light-Green h2::before {
   border-top-color: transparent;
   border-right-color: #33691E;
   border-bottom-color: #33691E;
   border-left-color: transparent;
 }
-.material-card.Light-Green.mc-active h2:before {
+.material-card.Light-Green.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #8BC34A;
   border-bottom-color: #8BC34A;
   border-left-color: transparent;
 }
-.material-card.Light-Green.mc-active h2:after {
+.material-card.Light-Green.mc-active h2::after {
   border-top-color: #33691E;
   border-right-color: #33691E;
   border-bottom-color: transparent;
@@ -906,25 +904,25 @@
 .material-card.Lime h2 {
   background-color: #CDDC39;
 }
-.material-card.Lime h2:after {
+.material-card.Lime h2::after {
   border-top-color: #CDDC39;
   border-right-color: #CDDC39;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Lime h2:before {
+.material-card.Lime h2::before {
   border-top-color: transparent;
   border-right-color: #827717;
   border-bottom-color: #827717;
   border-left-color: transparent;
 }
-.material-card.Lime.mc-active h2:before {
+.material-card.Lime.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #CDDC39;
   border-bottom-color: #CDDC39;
   border-left-color: transparent;
 }
-.material-card.Lime.mc-active h2:after {
+.material-card.Lime.mc-active h2::after {
   border-top-color: #827717;
   border-right-color: #827717;
   border-bottom-color: transparent;
@@ -956,25 +954,25 @@
 .material-card.Yellow h2 {
   background-color: #FFEB3B;
 }
-.material-card.Yellow h2:after {
+.material-card.Yellow h2::after {
   border-top-color: #FFEB3B;
   border-right-color: #FFEB3B;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Yellow h2:before {
+.material-card.Yellow h2::before {
   border-top-color: transparent;
   border-right-color: #F57F17;
   border-bottom-color: #F57F17;
   border-left-color: transparent;
 }
-.material-card.Yellow.mc-active h2:before {
+.material-card.Yellow.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #FFEB3B;
   border-bottom-color: #FFEB3B;
   border-left-color: transparent;
 }
-.material-card.Yellow.mc-active h2:after {
+.material-card.Yellow.mc-active h2::after {
   border-top-color: #F57F17;
   border-right-color: #F57F17;
   border-bottom-color: transparent;
@@ -1006,25 +1004,25 @@
 .material-card.Amber h2 {
   background-color: #FFC107;
 }
-.material-card.Amber h2:after {
+.material-card.Amber h2::after {
   border-top-color: #FFC107;
   border-right-color: #FFC107;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Amber h2:before {
+.material-card.Amber h2::before {
   border-top-color: transparent;
   border-right-color: #FF6F00;
   border-bottom-color: #FF6F00;
   border-left-color: transparent;
 }
-.material-card.Amber.mc-active h2:before {
+.material-card.Amber.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #FFC107;
   border-bottom-color: #FFC107;
   border-left-color: transparent;
 }
-.material-card.Amber.mc-active h2:after {
+.material-card.Amber.mc-active h2::after {
   border-top-color: #FF6F00;
   border-right-color: #FF6F00;
   border-bottom-color: transparent;
@@ -1056,25 +1054,25 @@
 .material-card.Orange h2 {
   background-color: #FF9800;
 }
-.material-card.Orange h2:after {
+.material-card.Orange h2::after {
   border-top-color: #FF9800;
   border-right-color: #FF9800;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Orange h2:before {
+.material-card.Orange h2::before {
   border-top-color: transparent;
   border-right-color: #E65100;
   border-bottom-color: #E65100;
   border-left-color: transparent;
 }
-.material-card.Orange.mc-active h2:before {
+.material-card.Orange.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #FF9800;
   border-bottom-color: #FF9800;
   border-left-color: transparent;
 }
-.material-card.Orange.mc-active h2:after {
+.material-card.Orange.mc-active h2::after {
   border-top-color: #E65100;
   border-right-color: #E65100;
   border-bottom-color: transparent;
@@ -1106,25 +1104,25 @@
 .material-card.Deep-Orange h2 {
   background-color: #FF5722;
 }
-.material-card.Deep-Orange h2:after {
+.material-card.Deep-Orange h2::after {
   border-top-color: #FF5722;
   border-right-color: #FF5722;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Deep-Orange h2:before {
+.material-card.Deep-Orange h2::before {
   border-top-color: transparent;
   border-right-color: #BF360C;
   border-bottom-color: #BF360C;
   border-left-color: transparent;
 }
-.material-card.Deep-Orange.mc-active h2:before {
+.material-card.Deep-Orange.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #FF5722;
   border-bottom-color: #FF5722;
   border-left-color: transparent;
 }
-.material-card.Deep-Orange.mc-active h2:after {
+.material-card.Deep-Orange.mc-active h2::after {
   border-top-color: #BF360C;
   border-right-color: #BF360C;
   border-bottom-color: transparent;
@@ -1156,25 +1154,25 @@
 .material-card.Brown h2 {
   background-color: #795548;
 }
-.material-card.Brown h2:after {
+.material-card.Brown h2::after {
   border-top-color: #795548;
   border-right-color: #795548;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Brown h2:before {
+.material-card.Brown h2::before {
   border-top-color: transparent;
   border-right-color: #3E2723;
   border-bottom-color: #3E2723;
   border-left-color: transparent;
 }
-.material-card.Brown.mc-active h2:before {
+.material-card.Brown.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #795548;
   border-bottom-color: #795548;
   border-left-color: transparent;
 }
-.material-card.Brown.mc-active h2:after {
+.material-card.Brown.mc-active h2::after {
   border-top-color: #3E2723;
   border-right-color: #3E2723;
   border-bottom-color: transparent;
@@ -1206,25 +1204,25 @@
 .material-card.Grey h2 {
   background-color: #9E9E9E;
 }
-.material-card.Grey h2:after {
+.material-card.Grey h2::after {
   border-top-color: #9E9E9E;
   border-right-color: #9E9E9E;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Grey h2:before {
+.material-card.Grey h2::before {
   border-top-color: transparent;
   border-right-color: #212121;
   border-bottom-color: #212121;
   border-left-color: transparent;
 }
-.material-card.Grey.mc-active h2:before {
+.material-card.Grey.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #9E9E9E;
   border-bottom-color: #9E9E9E;
   border-left-color: transparent;
 }
-.material-card.Grey.mc-active h2:after {
+.material-card.Grey.mc-active h2::after {
   border-top-color: #212121;
   border-right-color: #212121;
   border-bottom-color: transparent;
@@ -1256,25 +1254,25 @@
 .material-card.Blue-Grey h2 {
   background-color: #607D8B;
 }
-.material-card.Blue-Grey h2:after {
+.material-card.Blue-Grey h2::after {
   border-top-color: #607D8B;
   border-right-color: #607D8B;
   border-bottom-color: transparent;
   border-left-color: transparent;
 }
-.material-card.Blue-Grey h2:before {
+.material-card.Blue-Grey h2::before {
   border-top-color: transparent;
   border-right-color: #263238;
   border-bottom-color: #263238;
   border-left-color: transparent;
 }
-.material-card.Blue-Grey.mc-active h2:before {
+.material-card.Blue-Grey.mc-active h2::before {
   border-top-color: transparent;
   border-right-color: #607D8B;
   border-bottom-color: #607D8B;
   border-left-color: transparent;
 }
-.material-card.Blue-Grey.mc-active h2:after {
+.material-card.Blue-Grey.mc-active h2::after {
   border-top-color: #263238;
   border-right-color: #263238;
   border-bottom-color: transparent;
