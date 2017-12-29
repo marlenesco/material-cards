@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleLinterPlugin = require('stylelint-webpack-plugin');
+const GoogleFontsPlugin = require('google-fonts-webpack-plugin');
 
 const nodeEnv = process.env.NODE_ENV || 'production';
 
@@ -8,6 +9,12 @@ const extractCss = new ExtractTextPlugin(
   {
     filename: 'material-cards-auto-height.css',
     disable: nodeEnv === 'development'
+  });
+const googleFonts = new GoogleFontsPlugin(
+  {
+    fonts: [
+      { family: "Raleway", variants: ["400", "300", "200", "500", "600", "700"] }
+    ]
   });
 const linter = new StyleLinterPlugin(
   {
@@ -52,6 +59,8 @@ module.exports = {
   },
   plugins: [
     extractCss,
-    /* linter */
+    googleFonts
+    /* LESS/CSS linter */
+
   ]
 };
