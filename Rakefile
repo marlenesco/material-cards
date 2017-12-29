@@ -130,7 +130,7 @@ end
 
 desc 'clean, compile and minify'
 task :compile do
-  puts 'TODO'
+ `yarn build-once`
 end
 
 desc 'read deployment specifications'
