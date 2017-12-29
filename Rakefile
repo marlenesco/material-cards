@@ -67,13 +67,9 @@ class Deployer
   end
 
   def run
-    reset
     # Remove all files
-    begin
-      ftp_client.delete(home_page)
-    rescue Net::FTPPermError
-      puts 'home page does not exist yet on server'
-    end
+    remove_home_page
+    reset
     folders.each do |_, remote|
       ftp_client.chdir(remote)
       ftp_client.list.each do |entry|
@@ -82,9 +78,8 @@ class Deployer
     end
 
     # Copy files placed in public directory
+    deploy_home_page
     reset
-    puts 'copying home page to remote server'
-    ftp_client.putbinaryfile(home_page, home_page)
     folders.each do |local, remote|
       ftp_client.chdir(remote)
       Pathname.glob(local + "/*").each do |entry|
@@ -102,6 +97,18 @@ class Deployer
 
   def reset
     ftp_client.chdir(remote_home)
+  end
+
+  def remove_home_page
+    reset
+    puts 'cleaning up old home page'
+    ftp_client.delete(home_page) if ftp_client.list.include?(home_page)
+  end
+
+  def deploy_home_page
+    reset
+    puts 'deploying home page to remote server'
+    ftp_client.putbinaryfile(home_page, home_page)
   end
 end
 
