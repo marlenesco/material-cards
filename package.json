@@ -33,5 +33,10 @@
   "scripts": {
     "build": "webpack --progress --watch",
     "build-once": "webpack --progress"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "popper": "^1.0.1"
   }
 }
