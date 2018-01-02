@@ -13,7 +13,7 @@ const extractCss = new ExtractTextPlugin(
 const googleFonts = new GoogleFontsPlugin(
   {
     fonts: [
-      { family: "Raleway", variants: ["400", "300", "200", "500", "600", "700"] }
+      {family: "Raleway", variants: ["400", "300", "200", "500", "600", "700"]}
     ]
   });
 const styleLinter = new StyleLinterPlugin(
@@ -34,6 +34,13 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader",
+        options: {
+          name: 'font/[name].[ext]',
+        }
+      },
       {
         test: /\.less/,
         exclude: [path.resolve(__dirname, 'node_modules')],
