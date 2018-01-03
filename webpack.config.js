@@ -13,7 +13,7 @@ const extractCss = new ExtractTextPlugin(
 const googleFonts = new GoogleFontsPlugin(
   {
     fonts: [
-      {family: "Raleway", variants: ["400", "300", "200", "500", "600", "700"]}
+      { family: "Raleway", variants: ["400", "300", "200", "500", "600", "700", "800", "900"] }
     ]
   });
 const styleLinter = new StyleLinterPlugin(

@@ -87,3 +87,33 @@
 		url("./font/Raleway-Bold.ttf") format("truetype"),
 		url("./font/Raleway-Bold.svg") format("svg");
 }
+
+/* === Raleway - 800 */
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 800;
+	src: url("./font/Raleway-ExtraBold.eot");
+	src: local("Raleway ExtraBold"),
+		local("Raleway-ExtraBold"),
+		url("./font/Raleway-ExtraBold.eot") format("embedded-opentype"),
+		url("./font/Raleway-ExtraBold.woff2") format("woff2"),
+		url("./font/Raleway-ExtraBold.woff") format("woff"),
+		url("./font/Raleway-ExtraBold.ttf") format("truetype"),
+		url("./font/Raleway-ExtraBold.svg") format("svg");
+}
+
+/* === Raleway - 900 */
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 900;
+	src: url("./font/Raleway-Black.eot");
+	src: local("Raleway Black"),
+		local("Raleway-Black"),
+		url("./font/Raleway-Black.eot") format("embedded-opentype"),
+		url("./font/Raleway-Black.woff2") format("woff2"),
+		url("./font/Raleway-Black.woff") format("woff"),
+		url("./font/Raleway-Black.ttf") format("truetype"),
+		url("./font/Raleway-Black.svg") format("svg");
+}
