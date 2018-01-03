@@ -5,6 +5,8 @@ const GoogleFontsPlugin = require('google-fonts-webpack-plugin');
 const nodeEnv = process.env.NODE_ENV || 'production';
 
 const path = require('path');
+const webpack = require('webpack');
+
 const extractCss = new ExtractTextPlugin(
   {
     filename: 'material-cards-auto-height.css',
@@ -13,7 +15,7 @@ const extractCss = new ExtractTextPlugin(
 const googleFonts = new GoogleFontsPlugin(
   {
     fonts: [
-      { family: "Raleway", variants: ["400", "300", "200", "500", "600", "700"] }
+      { family: "Raleway", variants: ["400", "300", "200", "500", "600", "700", "800", "900"] }
     ]
   });
 const styleLinter = new StyleLinterPlugin(
@@ -34,6 +36,13 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "file-loader",
+        options: {
+          name: 'font/[name].[ext]'
+        }
+      },
       {
         test: /\.less/,
         exclude: [path.resolve(__dirname, 'node_modules')],
@@ -61,6 +70,13 @@ module.exports = {
   plugins: [
     extractCss,
     googleFonts,
-    styleLinter
+    styleLinter,
+    new webpack.ProvidePlugin(
+      {
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      }
+    )
   ]
 };

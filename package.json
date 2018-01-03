@@ -1,6 +1,6 @@
 {
   "name": "aventine-responsive",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Aventine Solutions Material Cards Responsive Site 2017",
   "main": "index.js",
   "repository": {
@@ -21,6 +21,8 @@
   "devDependencies": {
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^1.1.6",
+    "font-awesome-webpack": "^0.0.5-beta.2",
     "google-fonts-webpack-plugin": "^0.4.4",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
@@ -33,5 +35,13 @@
   "scripts": {
     "build": "webpack --progress --watch",
     "build-once": "webpack --progress"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "jquery-bridget": "^2.0.1",
+    "masonry-layout": "^4.2.1",
+    "popper": "^1.0.1"
   }
 }
