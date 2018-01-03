@@ -5,6 +5,8 @@ const GoogleFontsPlugin = require('google-fonts-webpack-plugin');
 const nodeEnv = process.env.NODE_ENV || 'production';
 
 const path = require('path');
+const webpack = require('webpack');
+
 const extractCss = new ExtractTextPlugin(
   {
     filename: 'material-cards-auto-height.css',
@@ -38,7 +40,7 @@ module.exports = {
         test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: "file-loader",
         options: {
-          name: 'font/[name].[ext]',
+          name: 'font/[name].[ext]'
         }
       },
       {
@@ -68,6 +70,13 @@ module.exports = {
   plugins: [
     extractCss,
     googleFonts,
-    styleLinter
+    styleLinter,
+    new webpack.ProvidePlugin(
+      {
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      }
+    )
   ]
 };
