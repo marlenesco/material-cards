@@ -1,6 +1,5 @@
 remote_home: /public_html
 home_page: index.html
 folders:
-  js: /public_html/js
   dist: /public_html/dist
   images: /public_html/images
