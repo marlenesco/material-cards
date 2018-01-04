@@ -76,6 +76,13 @@ class Deployer
     ftp_client.ftp.close
   end
 
+  def clean
+    remove_home_page
+    clean_folders
+  ensure
+    ftp_client.ftp.close
+  end
+
   private
 
   attr_reader :remote_home, :home_page, :folders, :ftp_client
@@ -142,6 +149,11 @@ end
 desc 'deploy the specified local files to the remote server'
 task :deploy do
   Deployer.new($spec).run
+end
+
+desc 'remove all deployed files and folders from the remove server'
+task clean: [:check_env, :spec] do
+  Deployer.new($spec).clean
 end
 
 desc 'default: deploy local files to remote server after compiling'
