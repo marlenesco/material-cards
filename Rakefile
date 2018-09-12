@@ -32,7 +32,7 @@ class FTPClient
       puts "Removing file: #{file_or_dir}"
       ftp.delete(file_or_dir)
     else
-      list(file_or_dir).each { |entry| delete_recursive(file_or_dir + "/" + entry) }
+      list(file_or_dir).each { |entry| delete_recursive(entry) }
       puts "Removing directory: #{file_or_dir}"
       ftp.rmdir(file_or_dir)
     end
@@ -54,7 +54,7 @@ class FTPClient
 
   # file list
   def list(path = nil)
-    ftp.nlst(path).select { |entry| entry !~ /^\.{1,2}$/ }
+    ftp.nlst(path).select { |entry| entry !~ %r([.]{1,2}$) }
   end
 end
 
