@@ -340,6 +340,19 @@ autoprefixer@^7.1.2:
     postcss "^6.0.14"
     postcss-value-parser "^3.2.3"
 
+aventine-background-slideshow@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/aventine-background-slideshow/-/aventine-background-slideshow-1.0.2.tgz#1a2dad00a0f3bfbf13f67aa7733ea9a1c298b005"
+  dependencies:
+    bootstrap "^3.3.7"
+    font-awesome "^4.7.0"
+    jquery "^3.2.1"
+    jquery-bridget "^2.0.1"
+    masonry-layout "^4.2.1"
+    popper "^1.0.1"
+  optionalDependencies:
+    fsevents "^1.1.1"
+
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"
