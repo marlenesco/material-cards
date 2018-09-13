@@ -37,8 +37,8 @@
     "build-once": "webpack --progress"
   },
   "dependencies": {
-    "aventine-background-slideshow": "^1.0.2",
-    "bootstrap": "^3.3.7",
+    "aventine-background-slideshow": "^1.0.3",
+    "bootstrap-less": "^3.3.8",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "jquery-bridget": "^2.0.1",

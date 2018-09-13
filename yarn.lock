@@ -340,11 +340,11 @@ autoprefixer@^7.1.2:
     postcss "^6.0.14"
     postcss-value-parser "^3.2.3"
 
-aventine-background-slideshow@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/aventine-background-slideshow/-/aventine-background-slideshow-1.0.2.tgz#1a2dad00a0f3bfbf13f67aa7733ea9a1c298b005"
+aventine-background-slideshow@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/aventine-background-slideshow/-/aventine-background-slideshow-1.0.3.tgz#8f424544aff70ede8d62901aa58e838353a52b4a"
   dependencies:
-    bootstrap "^3.3.7"
+    bootstrap-less "^3.3.8"
     font-awesome "^4.7.0"
     jquery "^3.2.1"
     jquery-bridget "^2.0.1"
@@ -474,6 +474,10 @@ boom@5.x.x:
   resolved "https://registry.yarnpkg.com/boom/-/boom-5.2.0.tgz#5dd9da6ee3a5f302077436290cb717d3f4a54e02"
   dependencies:
     hoek "4.x.x"
+
+bootstrap-less@^3.3.8:
+  version "3.3.8"
+  resolved "https://registry.yarnpkg.com/bootstrap-less/-/bootstrap-less-3.3.8.tgz#71f29dd5a7fffedfe89f1605bbadfe0a338dae53"
 
 bootstrap@^3.3.7:
   version "3.3.7"
