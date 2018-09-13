@@ -1,0 +1,50 @@
+.material-card {
+  .documents {
+    margin-bottom: 0;
+
+    a {
+      width: 5em;
+      height: 52px;
+      margin-left: 5px;
+      margin-bottom: 15px;
+      font-size: 28px;
+      color: #FFF;
+      line-height: 52px;
+      text-decoration: none;
+      text-align: left;
+      padding-left: 1em;
+    }
+
+    .pdf {
+      &::after {
+        font-family: Raleway, sans-serif;
+        content: ' pdf';
+      }
+    }
+
+    .doc {
+      &::after {
+        font-family: Raleway, sans-serif;
+        content: ' doc';
+      }
+    }
+
+    .docx {
+      &::after {
+        font-family: Raleway, sans-serif;
+        content: ' docx';
+      }
+    }
+
+    .odt {
+      &::after {
+        font-family: Raleway, sans-serif;
+        content: ' odt';
+      }
+    }
+
+    li {
+      list-style: none;
+    }
+  }
+}

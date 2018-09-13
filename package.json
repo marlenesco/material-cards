@@ -1,0 +1,48 @@
+{
+  "name": "aventine-responsive",
+  "version": "1.0.4",
+  "description": "Aventine Solutions Material Cards Responsive Site 2018",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:aventinesolutions/aventine-responsive.git"
+  },
+  "author": "Matthew Eichler <matthew.eichler@aventinesolutions.nl>",
+  "license": "MIT",
+  "keywords": [
+    "aventine",
+    "responsive",
+    "material",
+    "cards"
+  ],
+  "optionalDependencies": {
+    "fsevents": "^1.1.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^1.1.6",
+    "font-awesome-webpack": "^0.0.5-beta.2",
+    "google-fonts-webpack-plugin": "^0.4.4",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "style-loader": "^0.16.1",
+    "stylelint": "^8.1.1",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-webpack-plugin": "^0.9.0",
+    "webpack": "^2.4.1"
+  },
+  "scripts": {
+    "build": "webpack --progress --watch",
+    "build-once": "webpack --progress"
+  },
+  "dependencies": {
+    "aventine-background-slideshow": "^1.0.3",
+    "bootstrap-less": "^3.3.8",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "jquery-bridget": "^2.0.1",
+    "masonry-layout": "^4.2.1",
+    "popper": "^1.0.1"
+  }
+}
