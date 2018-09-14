@@ -109,6 +109,13 @@ $('.material-cards').on(fullCardEvent, function (event) {
 ### Material cards and Masonry grid library
 check `demo/material-cards_jquery-plugin_masonry.html` material cards without a fixed height (use this less file `less/material-cards-auto-height.less`) and awesome [javascript Masonry grid library](http://masonry.desandro.com/).
 
+### Background Styles/Animations
+The background slideshow comes from a separate package, [aventine-background-slideshow](https://github.com/aventinesolutions/aventine-background-slideshow):
+
+```shell
+yarn add aventine-background-slideshow
+```
+
 ## Deploying
 
 This has Ruby Rake tasks for deploying to a server using FTP.
