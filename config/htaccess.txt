@@ -1,6 +1,7 @@
 RewriteEngine On
 Options +FollowSymlinks
 RewriteBase /
-RewriteCond %{HTTP_HOST} (http://aventine.solutions|aventinesolutions.nl) [OR]
-RewriteCond %{HTTP_HOST} (aventinesolutions.co|aventinesolutions.eu)
+RewriteCond %{HTTP_HOST} aventinesolutions\.nl [OR]
+RewriteCond %{HTTP_HOST} (aventinesolutions\.co|aventinesolutions\.eu) [OR]
+RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://aventine.solutions [L]
