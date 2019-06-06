@@ -43,6 +43,7 @@
     "jquery": "^3.2.1",
     "jquery-bridget": "^2.0.1",
     "masonry-layout": "^4.2.1",
+    "npm": "^6.9.0",
     "popper": "^1.0.1"
   }
 }
