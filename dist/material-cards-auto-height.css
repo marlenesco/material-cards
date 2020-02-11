@@ -10462,5 +10462,11 @@ h3 {
 .material-card.Amber i.fa-arrow-left {
   color: black;
 }
+.img-portrait {
+  height: 10em;
+  width: 10em;
+  margin: 1em;
+  border-radius: 100%;
+}
 
 /*# sourceMappingURL=material-cards-auto-height.css.map*/
