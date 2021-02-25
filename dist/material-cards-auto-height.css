@@ -10267,7 +10267,7 @@ h3 {
   animation: imageAnimation 175s linear infinite 0s;
 }
 .aventine-slideshow li:nth-child(1) span {
-  background-image: url("/images/backgrounds/AmsterdamGoldenParachute.jpg");
+  background-image: url("/images/backgrounds/201910281158-DSC09820-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(2) div {
   -webkit-animation-delay: 25s;
@@ -10280,7 +10280,7 @@ h3 {
   -moz-animation-delay: 25s;
   -o-animation-delay: 25s;
   animation-delay: 25s;
-  background-image: url("/images/backgrounds/CapelaDosOssos.jpg");
+  background-image: url("/images/backgrounds/201910281159-DSC09822-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(3) div {
   -webkit-animation-delay: 50s;
@@ -10293,7 +10293,7 @@ h3 {
   -moz-animation-delay: 50s;
   -o-animation-delay: 50s;
   animation-delay: 50s;
-  background-image: url("/images/backgrounds/HaarlemmerdijkPurpleHaze.jpg");
+  background-image: url("/images/backgrounds/201910281159-DSC09823-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(4) div {
   -webkit-animation-delay: 75s;
@@ -10306,7 +10306,7 @@ h3 {
   -moz-animation-delay: 75s;
   -o-animation-delay: 75s;
   animation-delay: 75s;
-  background-image: url("/images/backgrounds/LavenderDubrovnikDreams.jpg");
+  background-image: url("/images/backgrounds/201910281200-DSC09826-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(5) div {
   -webkit-animation-delay: 100s;
@@ -10319,7 +10319,7 @@ h3 {
   -moz-animation-delay: 100s;
   -o-animation-delay: 100s;
   animation-delay: 100s;
-  background-image: url("/images/backgrounds/LoneSkaterBrouwersgracht.jpg");
+  background-image: url("/images/backgrounds/201910281204-DSC09830-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(6) div {
   -webkit-animation-delay: 125s;
@@ -10332,7 +10332,7 @@ h3 {
   -moz-animation-delay: 125s;
   -o-animation-delay: 125s;
   animation-delay: 125s;
-  background-image: url("/images/backgrounds/SpikeyCristoffel.jpg");
+  background-image: url("/images/backgrounds/201910281207-DSC09833-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(7) div {
   -webkit-animation-delay: 150s;
@@ -10345,7 +10345,7 @@ h3 {
   -moz-animation-delay: 150s;
   -o-animation-delay: 150s;
   animation-delay: 150s;
-  background-image: url("/images/backgrounds/EvoraPlatonic.jpg");
+  background-image: url("/images/backgrounds/201910281207-DSC09833-1024x576.jpg");
 }
 /* Animation for the slideshow images */
 @-webkit-keyframes imageAnimation {
@@ -10449,6 +10449,47 @@ h3 {
     display: none;
   }
 }
+.header-animation {
+  letter-spacing: normal;
+  animation: headerAnimation 25s linear infinite 0s;
+}
+@keyframes headerAnimation {
+  0% {
+    letter-spacing: normal;
+  }
+  82% {
+    letter-spacing: 1em;
+  }
+  100% {
+    letter-spacing: normal;
+  }
+}
+@media screen and (max-width: 480px) {
+  @keyframes headerAnimation {
+    0% {
+      letter-spacing: normal;
+    }
+    82% {
+      letter-spacing: 0.15em;
+    }
+    100% {
+      letter-spacing: normal;
+    }
+  }
+}
+@media screen and (max-width: 640px) {
+  @keyframes headerAnimation {
+    0% {
+      letter-spacing: normal;
+    }
+    82% {
+      letter-spacing: 0.3em;
+    }
+    100% {
+      letter-spacing: normal;
+    }
+  }
+}
 .page-header h1 {
   font-weight: 900;
 }
@@ -10461,6 +10502,12 @@ h3 {
 .material-card.Yellow i.fa-arrow-left,
 .material-card.Amber i.fa-arrow-left {
   color: black;
+}
+.img-portrait {
+  height: 10em;
+  width: 10em;
+  margin: 1em;
+  border-radius: 100%;
 }
 
 /*# sourceMappingURL=material-cards-auto-height.css.map*/
