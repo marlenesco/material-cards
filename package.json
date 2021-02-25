@@ -23,7 +23,6 @@
     "extract-text-webpack-plugin": "2.1.0",
     "file-loader": "1.1.6",
     "font-awesome-webpack": "0.0.5-beta.2",
-    "google-fonts-webpack-plugin": "0.4.4",
     "less": "2.7.2",
     "less-loader": "4.0.3",
     "style-loader": "0.16.1",
