@@ -1,0 +1,52 @@
+@length: @length-animation / @total-slides;
+
+.header-animation {
+  letter-spacing: normal;
+  animation: headerAnimation @length linear infinite 0s;
+}
+
+@keyframes headerAnimation {
+  0% {
+    letter-spacing: normal;
+  }
+
+  82% {
+    letter-spacing: 1em;
+  }
+
+  100% {
+    letter-spacing: normal;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  @keyframes headerAnimation {
+    0% {
+      letter-spacing: normal;
+    }
+
+    82% {
+      letter-spacing: 0.15em;
+    }
+
+    100% {
+      letter-spacing: normal;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  @keyframes headerAnimation {
+    0% {
+      letter-spacing: normal;
+    }
+
+    82% {
+      letter-spacing: 0.3em;
+    }
+
+    100% {
+      letter-spacing: normal;
+    }
+  }
+}
