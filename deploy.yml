@@ -1,4 +1,4 @@
-remote_home: /public_html
+remote_home: /aventine.solutions/public_html
 home_page: index.html
 folders:
   dist: /public_html/dist

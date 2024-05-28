@@ -1,3 +1,4 @@
+require 'byebug'
 require 'dotenv/load'
 require 'net/ftp'
 require 'yaml'
