@@ -3,7 +3,7 @@ class GcpTasks
   include Rake::DSL
 
   def initialize
-    logger = Logger.new($stderr)
+    logger = Logger.new($stdout)
     logger.level = Logger::DEBUG
     Google::Apis.logger = logger
 
