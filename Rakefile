@@ -5,6 +5,12 @@ require 'yaml'
 require 'pathname'
 require 'forwardable'
 require 'awesome_print'
+require 'logger'
+require 'google/apis'
+require 'google/cloud/storage'
+
+Pathname.glob('./**/*.rake').each { |file| load file.to_s }
+GcpTasks.new
 
 class FTPClient
   extend Forwardable
