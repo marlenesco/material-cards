@@ -2,19 +2,19 @@
 class GcpTasks
   include Rake::DSL
 
+  class << self
+    def loglevel
+      Logger::INFO
+    end
+  end
+
   def initialize
     namespace :gcp do
       task :default do
         logger
         bucket.upload_file(config['home_page'], config['home_page'])
         folders.map do |folder|
-          folder.each_entry do |file|
-            path = folder.join(file)
-            logger.info("uploading #{path} ...")
-            if path.file?
-              bucket.upload_file(path.to_s, path.to_s)
-            end
-          end
+          upload_folder_entries(folder)
         end
       end
     end
@@ -25,7 +25,7 @@ class GcpTasks
   def logger
     unless @logger
       @logger ||= Logger.new($stdout)
-      @logger.level = Logger::DEBUG
+      @logger.level = GcpTasks.loglevel
       Google::Apis.logger = @logger
     end
     @logger
@@ -45,5 +45,17 @@ class GcpTasks
 
   def folders
     @folders ||= config['folders'].map { |name| Pathname.new(name) }
+  end
+
+  def upload_folder_entries(folder)
+    folder.each_entry do |file|
+      path = folder.join(file)
+      logger.info("uploading #{path} ...")
+      if path.directory?
+        upload_folder_entries(path) unless path.to_s.match(/[\.]{1,2}/)
+      else
+        bucket.upload_file(path.to_s, path.to_s) if path.file?
+      end
+    end
   end
 end
