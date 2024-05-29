@@ -48,14 +48,16 @@ class GcpTasks
   end
 
   def upload_folder_entries(folder)
+    subfolders = []
     folder.each_entry do |file|
       path = folder.join(file)
       logger.info("uploading #{path} ...")
       if path.directory?
-        upload_folder_entries(path) unless path.to_s.match(/[\.]{1,2}/)
+        subfolders.push(path) unless path.to_s.match(/[\.]{1,2}/)
       else
         bucket.upload_file(path.to_s, path.to_s) if path.file?
       end
     end
+    subfolders.map { |folder| upload_folder_entries(folder) }
   end
 end
