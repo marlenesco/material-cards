@@ -10,11 +10,9 @@ class GcpTasks
     namespace :gcp do
       task :default do
         bucket.upload_file(config['home_page'], config['home_page'])
-        config['folders'].map do |folder|
-          Pathname.new('.').join(folder).each_entry do |f|
-            remote_file_name = "#{folder}/#{f.basename}"
-            print "uploading #{remote_file_name} ..."
-            bucket.upload_file(f, remote_file_name)
+        folders.map do |folder|
+          folder.each_entry do |file|
+            path = folder.join(file)
           end
         end
       end
@@ -33,5 +31,9 @@ class GcpTasks
 
   def bucket
     @bucket ||= storage.bucket(config['bucket'])
+  end
+
+  def folders
+    @folders ||= config['folders'].map { |name| Pathname.new(name) }
   end
 end
