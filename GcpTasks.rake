@@ -3,16 +3,17 @@ class GcpTasks
   include Rake::DSL
 
   def initialize
-    logger = Logger.new($stdout)
-    logger.level = Logger::DEBUG
-    Google::Apis.logger = logger
-
     namespace :gcp do
       task :default do
+        logger
         bucket.upload_file(config['home_page'], config['home_page'])
         folders.map do |folder|
           folder.each_entry do |file|
             path = folder.join(file)
+            logger.info("uploading #{path} ...")
+            if path.file?
+              bucket.upload_file(path.to_s, path.to_s)
+            end
           end
         end
       end
@@ -20,6 +21,15 @@ class GcpTasks
   end
 
   private
+
+  def logger
+    unless @logger
+      @logger ||= Logger.new($stdout)
+      @logger.level = Logger::DEBUG
+      Google::Apis.logger = @logger
+    end
+    @logger
+  end
 
   def config
     @config ||= YAML.load_file('gcp-deploy.yaml')
