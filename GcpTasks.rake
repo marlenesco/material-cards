@@ -20,9 +20,9 @@ class GcpTasks
         manifest[:files] = []
         folders.map do |folder|
           manifest[:files].push(folder.find.map { |f| f if f.file? }.compact)
-          # upload_folder_entries(folder)
         end
         manifest[:files] = manifest[:files].flatten
+        upload_files
         write_manifest
       end
     end
@@ -59,18 +59,11 @@ class GcpTasks
     @folders ||= config['folders'].map { |name| Pathname.new(name) }
   end
 
-  def upload_folder_entries(folder)
-    subfolders = []
-    folder.each_entry do |file|
-      path = folder.join(file)
-      logger.info("uploading #{path} ...")
-      if path.directory?
-        subfolders.push(path) unless path.to_s.match(/[\.]{1,2}/)
-      else
-        bucket.upload_file(path.to_s, path.to_s) if path.file?
-      end
+  def upload_files
+    manifest[:files].map do |f|
+      logger.info("uploading #{f} ..")
+      bucket.upload_file(f.to_s, f.to_s)
     end
-    subfolders.map { |folder| upload_folder_entries(folder) }
   end
 
   def write_manifest
