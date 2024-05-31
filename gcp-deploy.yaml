@@ -1,5 +1,5 @@
 project_id: aventine-k8s
-bucket: aventine-responsive
+bucket: aventine-responsive-public
 home_page: index.html
 folders:
   - dist

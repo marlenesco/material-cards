@@ -200,4 +200,5 @@
   path: images/tis.jpg
 - !ruby/object:Pathname
   path: images/zend.jpg
-:uploaded: 2024-05-31 10:17:34.077629300 +02:00
+:bucket: aventine-responsive-public
+:uploaded: 2024-05-31 11:01:01.232352500 +02:00

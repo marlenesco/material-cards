@@ -15,7 +15,7 @@ class GcpTasks
   def initialize
     namespace :gcp do
       task :default do
-        logger
+        logger.info('uploading Home Page ...')
         bucket.upload_file(config['home_page'], config['home_page'])
         manifest[:files] = []
         folders.map do |folder|
@@ -67,6 +67,7 @@ class GcpTasks
   end
 
   def write_manifest
+    manifest[:bucket] = bucket.name
     manifest[:uploaded] = Time.now
     File.open(GcpTasks.manifest_path, 'w') { |f| f.write(manifest.to_yaml) }
   end
