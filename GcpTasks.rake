@@ -6,6 +6,10 @@ class GcpTasks
     def loglevel
       Logger::INFO
     end
+
+    def manifest_path
+      Pathname('gcp_manifest.yaml')
+    end
   end
 
   def initialize
@@ -13,9 +17,13 @@ class GcpTasks
       task :default do
         logger
         bucket.upload_file(config['home_page'], config['home_page'])
+        manifest[:files] = []
         folders.map do |folder|
-          upload_folder_entries(folder)
+          manifest[:files].push(folder.find.map { |f| f if f.file? }.compact)
+          # upload_folder_entries(folder)
         end
+        manifest[:files] = manifest[:files].flatten
+        write_manifest
       end
     end
   end
@@ -33,6 +41,10 @@ class GcpTasks
 
   def config
     @config ||= YAML.load_file('gcp-deploy.yaml')
+  end
+
+  def manifest
+    @manifest ||= {}
   end
 
   def storage
@@ -59,5 +71,10 @@ class GcpTasks
       end
     end
     subfolders.map { |folder| upload_folder_entries(folder) }
+  end
+
+  def write_manifest
+    manifest[:uploaded] = Time.now
+    File.open(GcpTasks.manifest_path, 'w') { |f| f.write(manifest.to_yaml) }
   end
 end
