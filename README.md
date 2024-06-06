@@ -134,9 +134,18 @@ Kill the webpack process if it is watching the files then do ...
 rake --trace
 ```
 ## Deploying to Google Cloud using the Ruby API
-* GCP Ruby API requires the "application default" loging
+* GCP Ruby API requires the "application default" login
 ```shell
 gcloud auth application-default login
 ```
+* Uploading the current website files
+```shell
+rake --trace gcp:deploy
+```
+* Remove all the current website files from the Bucket
+```shell
+rake --trace gcp:clean
+```
+
 
 

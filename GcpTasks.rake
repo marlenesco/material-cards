@@ -14,17 +14,32 @@ class GcpTasks
 
   def initialize
     namespace :gcp do
-      task :default do
+
+      desc 'Deploy Current Files to GCP Bucket'
+      task :deploy do
+        fill_manifest
         logger.info('uploading Home Page ...')
         bucket.upload_file(config['home_page'], config['home_page'])
-        manifest[:files] = []
-        folders.map do |folder|
-          manifest[:files].push(folder.find.map { |f| f if f.file? }.compact)
+        apply_to_files do |f|
+          logger.info("uploading #{f} ..")
+          bucket.upload_file(f.to_s, f.to_s)
         end
-        manifest[:files] = manifest[:files].flatten
-        upload_files
-        write_manifest
+        write_manifest(:deployed)
       end
+
+      desc 'Clean Currently Deployed Files from Bucket'
+      task :clean do
+        fill_manifest
+        logger.info('removing Home Page ...')
+        bucket.file(config['home_page']).delete
+        apply_to_files do |f|
+          logger.info("removing #{f} ..")
+          bucket.file(f.to_s).delete
+        end
+        write_manifest(:cleaned)
+      end
+
+      task default: :deploy
     end
   end
 
@@ -59,16 +74,28 @@ class GcpTasks
     @folders ||= config['folders'].map { |name| Pathname.new(name) }
   end
 
-  def upload_files
+  def fill_manifest
+    manifest[:files] = []
+    folders.map do |folder|
+      manifest[:files].push(folder.find.map { |f| f if f.file? }.compact)
+    end
+    manifest[:files] = manifest[:files].flatten
+  end
+
+  def apply_to_files
     manifest[:files].map do |f|
-      logger.info("uploading #{f} ..")
-      bucket.upload_file(f.to_s, f.to_s)
+      if block_given?
+        yield(f)
+      else
+        logger.info("file #{f} in manifest")
+      end
     end
   end
 
-  def write_manifest
+  def write_manifest(action)
     manifest[:bucket] = bucket.name
-    manifest[:uploaded] = Time.now
+    manifest[:action] = action
+    manifest[:executed] = Time.now
     File.open(GcpTasks.manifest_path, 'w') { |f| f.write(manifest.to_yaml) }
   end
 end
