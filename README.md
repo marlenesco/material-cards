@@ -117,7 +117,7 @@ The background slideshow comes from a separate package, [aventine-background-sli
 yarn add aventine-background-slideshow
 ```
 
-## Deploying
+## Deploying to Flexwebhosting using FTP
 
 This has Ruby Rake tasks for deploying to a server using FTP.
 
@@ -133,4 +133,19 @@ Kill the webpack process if it is watching the files then do ...
 ```shell
 rake --trace
 ```
+## Deploying to Google Cloud using the Ruby API
+* GCP Ruby API requires the "application default" login
+```shell
+gcloud auth application-default login
+```
+* Uploading the current website files
+```shell
+rake --trace gcp:deploy
+```
+* Remove all the current website files from the Bucket
+```shell
+rake --trace gcp:clean
+```
+
+
 

@@ -1,5 +1,5 @@
-remote_home: /public_html
+remote_home: /domains/aventinesolutions.nl/public_html
 home_page: index.html
 folders:
-  dist: /public_html/dist
-  images: /public_html/images
+  dist: /domains/aventinesolutions.nl/public_html/dist
+  images: /domains/aventinesolutions.nl/public_html/images
