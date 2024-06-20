@@ -107,6 +107,8 @@
 - !ruby/object:Pathname
   path: images/Bookshelves_23042017-DSC04769.jpg
 - !ruby/object:Pathname
+  path: images/CutThroat-435080a5-83b9-47b2-8716-86ae21eb512e-256x256.jpg
+- !ruby/object:Pathname
   path: images/CutThroat_DSC09920-Modifier-2-256 x 296.jpg
 - !ruby/object:Pathname
   path: images/agile.jpg
@@ -155,6 +157,8 @@
 - !ruby/object:Pathname
   path: images/gids.jpg
 - !ruby/object:Pathname
+  path: images/google-cloud-300x300.png
+- !ruby/object:Pathname
   path: images/ibm.jpg
 - !ruby/object:Pathname
   path: images/kolibrie-groot-case-min.jpg
@@ -202,4 +206,4 @@
   path: images/zend.jpg
 :bucket: aventine-responsive
 :action: :deployed
-:executed: 2024-06-06 16:37:00.115754000 +02:00
+:executed: 2024-06-20 16:02:53.047430000 +02:00
