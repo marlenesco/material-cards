@@ -117,21 +117,19 @@
 - !ruby/object:Pathname
   path: images/asml.png
 - !ruby/object:Pathname
-  path: images/backgrounds/201606281621-DSC02753-1024x576.jpg
+  path: images/backgrounds/201502161311-DSC00950-1024x576.jpg
 - !ruby/object:Pathname
-  path: images/backgrounds/201805021055-DSC06134-1024x576.jpg
+  path: images/backgrounds/201509171523-DSC01284-1024x576.jpg
 - !ruby/object:Pathname
-  path: images/backgrounds/201807210512-DSC06680-1024x576.jpg
+  path: images/backgrounds/201606281005-DSC02694-1024x576.jpg
 - !ruby/object:Pathname
-  path: images/backgrounds/201910161045-DSC09379-1024x576.jpg
+  path: images/backgrounds/201703051217-DSC04593-1024x576.jpg
 - !ruby/object:Pathname
-  path: images/backgrounds/201910261215-DSC09745-1024x576.jpg
+  path: images/backgrounds/201805081614-DSC06385-1024x576.jpg
 - !ruby/object:Pathname
-  path: images/backgrounds/201910281236-DSC09842-1024x576.jpg
+  path: images/backgrounds/201905311329-DSC07670-1024x576.jpg
 - !ruby/object:Pathname
-  path: images/backgrounds/202003080222-DSC09940-1024x576.jpg
-- !ruby/object:Pathname
-  path: images/backgrounds/202102120549-DSC00385-1024x576.jpg
+  path: images/backgrounds/202108041158-DSC00688-1024x576.jpg
 - !ruby/object:Pathname
   path: images/bitmoji-cut-throat-202002111619-344x344.png
 - !ruby/object:Pathname
@@ -205,5 +203,5 @@
 - !ruby/object:Pathname
   path: images/zend.jpg
 :bucket: aventine-responsive
-:action: :cleaned
-:executed: 2024-06-20 22:33:16.227741800 +02:00
+:action: :deployed
+:executed: 2024-06-20 22:35:12.656427000 +02:00
