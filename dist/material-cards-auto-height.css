@@ -10267,7 +10267,7 @@ h3 {
   animation: imageAnimation 175s linear infinite 0s;
 }
 .aventine-slideshow li:nth-child(1) span {
-  background-image: url("/images/backgrounds/202102120549-DSC00385-1024x576.jpg");
+  background-image: url("/images/backgrounds/202108041158-DSC00688-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(2) div {
   -webkit-animation-delay: 25s;
@@ -10280,7 +10280,7 @@ h3 {
   -moz-animation-delay: 25s;
   -o-animation-delay: 25s;
   animation-delay: 25s;
-  background-image: url("/images/backgrounds/201910161045-DSC09379-1024x576.jpg");
+  background-image: url("/images/backgrounds/201905311329-DSC07670-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(3) div {
   -webkit-animation-delay: 50s;
@@ -10293,7 +10293,7 @@ h3 {
   -moz-animation-delay: 50s;
   -o-animation-delay: 50s;
   animation-delay: 50s;
-  background-image: url("/images/backgrounds/202003080222-DSC09940-1024x576.jpg");
+  background-image: url("/images/backgrounds/201703051217-DSC04593-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(4) div {
   -webkit-animation-delay: 75s;
@@ -10306,7 +10306,7 @@ h3 {
   -moz-animation-delay: 75s;
   -o-animation-delay: 75s;
   animation-delay: 75s;
-  background-image: url("/images/backgrounds/201910261215-DSC09745-1024x576.jpg");
+  background-image: url("/images/backgrounds/201606281005-DSC02694-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(5) div {
   -webkit-animation-delay: 100s;
@@ -10319,7 +10319,7 @@ h3 {
   -moz-animation-delay: 100s;
   -o-animation-delay: 100s;
   animation-delay: 100s;
-  background-image: url("/images/backgrounds/201807210512-DSC06680-1024x576.jpg");
+  background-image: url("/images/backgrounds/201509171523-DSC01284-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(6) div {
   -webkit-animation-delay: 125s;
@@ -10332,7 +10332,7 @@ h3 {
   -moz-animation-delay: 125s;
   -o-animation-delay: 125s;
   animation-delay: 125s;
-  background-image: url("/images/backgrounds/201805021055-DSC06134-1024x576.jpg");
+  background-image: url("/images/backgrounds/201502161311-DSC00950-1024x576.jpg");
 }
 .aventine-slideshow li:nth-child(7) div {
   -webkit-animation-delay: 150s;
@@ -10345,7 +10345,7 @@ h3 {
   -moz-animation-delay: 150s;
   -o-animation-delay: 150s;
   animation-delay: 150s;
-  background-image: url("/images/backgrounds/201606281621-DSC02753-1024x576.jpg");
+  background-image: url("/images/backgrounds/201805081614-DSC06385-1024x576.jpg");
 }
 /* Animation for the slideshow images */
 @-webkit-keyframes imageAnimation {
