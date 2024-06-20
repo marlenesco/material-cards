@@ -1,13 +1,13 @@
 {
   "name": "aventine-responsive",
-  "version": "1.0.18",
-  "description": "Aventine Solutions Material Cards Responsive Site 2018",
+  "version": "1.0.20",
+  "description": "Aventine Solutions Material Cards Responsive Site 2024",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:aventinesolutions/aventine-responsive.git"
   },
-  "author": "Matthew Eichler <matthew.eichler@aventinesolutions.nl>",
+  "author": "Matthew Evan Eichler <matthew@aventine.solutions>",
   "license": "MIT",
   "keywords": [
     "aventine",

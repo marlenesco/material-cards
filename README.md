@@ -1,6 +1,6 @@
 Material Cards [![CodeHunt.io](https://img.shields.io/badge/vote-codehunt.io-02AFD1.svg)](http://codehunt.io/sub/responsive-material-card/?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)   
 ==============
-Version 1.0.19
+Version 1.0.20
 Simple user card based on [Google Material Color palette](https://www.google.com/design/spec/style/color.html#color-color-palette) and jQuery.
 
 [![See full preview](http://u.lorenzoferrara.net/marlenesco/material-card/card-preview.jpg)](http://codepen.io/marlenesco/full/NqOozj/)
@@ -49,7 +49,7 @@ options = {
     icon_open	   : 'fa-bars',       //string
     icon_spin	   : 'fa-spin-fast',  //string
     card_activator : 'click'          //string: click or hover
-});
+};
 ```
 
 The icons are from [Font Awesome](http://fortawesome.github.io/Font-Awesome/), `fa-spin-fast` is similar to [`fa-spin`](http://fortawesome.github.io/Font-Awesome/examples/#animated) but spin faster.  
@@ -146,6 +146,27 @@ rake --trace gcp:deploy
 ```shell
 rake --trace gcp:clean
 ```
+## Card Rainbow Colors
+Always rotate in this order:
+1. Red
+2. Pink
+3. Purple
+4. Deep-Purple
+5. Indigo
+6. Blue
+7. Light-Blue
+8. Cyan
+9. Teal
+10. Green
+11. Light-Green
+12. Lime
+13. Yellow
+14. Amber
+15. Deep-Orange
+16. Brown
+17. Blue-Grey
+18. Grey
+
 
 
 
