@@ -27,9 +27,9 @@ class GcpTasks
         write_manifest(:deployed)
       end
 
-      desc 'Clean Currently Deployed Files from Bucket'
+      desc 'Clean Currently Deployed Files from Bucket based on the last Saved Manifest'
       task :clean do
-        fill_manifest
+        load_last_manifest
         logger.info('removing Home Page ...')
         bucket.file(config['home_page']).delete
         apply_to_files do |f|
@@ -97,5 +97,12 @@ class GcpTasks
     manifest[:action] = action
     manifest[:executed] = Time.now
     File.open(GcpTasks.manifest_path, 'w') { |f| f.write(manifest.to_yaml) }
+    manifest
+  end
+
+  def load_last_manifest
+    @manifest = YAML.load_file(GcpTasks.manifest_path, permitted_classes: [Symbol, Time, Pathname])
+    fail %[Last manifest must be based on a "deployed" action] unless manifest[:action] == :deployed
+    manifest
   end
 end
