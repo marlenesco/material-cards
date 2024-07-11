@@ -10493,6 +10493,9 @@ h3 {
 .page-header h1 {
   font-weight: 900;
 }
+.logo {
+  width: 30%;
+}
 .material-card.Yellow h2,
 .material-card.Amber h2 {
   color: black;
