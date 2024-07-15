@@ -10465,12 +10465,15 @@ h3 {
   }
 }
 @media screen and (max-width: 480px) {
+  .logo {
+    width: 20em;
+  }
   @keyframes headerAnimation {
     0% {
       letter-spacing: normal;
     }
     82% {
-      letter-spacing: 0.15em;
+      letter-spacing: normal;
     }
     100% {
       letter-spacing: normal;
@@ -10478,12 +10481,15 @@ h3 {
   }
 }
 @media screen and (max-width: 640px) {
+  .logo {
+    width: 20em;
+  }
   @keyframes headerAnimation {
     0% {
       letter-spacing: normal;
     }
     82% {
-      letter-spacing: 0.3em;
+      letter-spacing: normal;
     }
     100% {
       letter-spacing: normal;
@@ -10498,7 +10504,7 @@ h3 {
   background-color: lightgrey;
 }
 .logo {
-  width: 30%;
+  width: 25em;
   margin: 1em;
 }
 .tag-line {
