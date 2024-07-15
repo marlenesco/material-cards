@@ -105,6 +105,8 @@
 - !ruby/object:Pathname
   path: images/4sight.jpg
 - !ruby/object:Pathname
+  path: images/AventineSolutions2024-1094x523.png
+- !ruby/object:Pathname
   path: images/Bookshelves_23042017-DSC04769.jpg
 - !ruby/object:Pathname
   path: images/CutThroat-435080a5-83b9-47b2-8716-86ae21eb512e-256x256.jpg
@@ -204,4 +206,4 @@
   path: images/zend.jpg
 :bucket: aventine-responsive
 :action: :deployed
-:executed: 2024-07-05 17:27:50.487218200 +02:00
+:executed: 2024-07-15 16:44:31.066906000 +02:00
