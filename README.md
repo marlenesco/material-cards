@@ -167,6 +167,13 @@ Always rotate in this order:
 17. Blue-Grey
 18. Grey
 
+## Color Schema for Aventine 2024 Rebrand from Spence Creative
+1. Brown
+2. Deep-Orange
+3. Grey
+4. Blue-Grey
+5. Yellow
+6. Amber
 
 
 
