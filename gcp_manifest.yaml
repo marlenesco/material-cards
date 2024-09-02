@@ -109,9 +109,7 @@
 - !ruby/object:Pathname
   path: images/Bookshelves_23042017-DSC04769.jpg
 - !ruby/object:Pathname
-  path: images/CutThroat-435080a5-83b9-47b2-8716-86ae21eb512e-256x256.jpg
-- !ruby/object:Pathname
-  path: images/CutThroat_DSC09920-Modifier-2-256 x 296.jpg
+  path: images/Cut_Throat_Sarah_End_of_Summer_5485c3b6-65b3-45f6-810b-7c3aeb9fd8d1_256x256.jpg
 - !ruby/object:Pathname
   path: images/agile.jpg
 - !ruby/object:Pathname
@@ -206,4 +204,4 @@
   path: images/zend.jpg
 :bucket: aventine-responsive
 :action: :deployed
-:executed: 2024-07-17 16:33:15.331345500 +02:00
+:executed: 2024-09-02 14:13:22.681053160 +02:00
