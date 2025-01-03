@@ -105,6 +105,8 @@
 - !ruby/object:Pathname
   path: images/20241212_Cut_Throat_Sarah_Winter_Yellow_Green_080d96ba-2737-46cc-ba16-b627c87c62dc_256x256.jpg
 - !ruby/object:Pathname
+  path: images/20250103_Amsterdam_750_Jaar_Banner_Kyle_Spence_Aventine_Responsive_256x255.jpg
+- !ruby/object:Pathname
   path: images/4sight.jpg
 - !ruby/object:Pathname
   path: images/AventineSolutions2024-1094x523.png
@@ -204,4 +206,4 @@
   path: images/zend.jpg
 :bucket: aventine-responsive
 :action: :deployed
-:executed: 2025-01-03 16:51:20.189264000 +01:00
+:executed: 2025-01-03 17:18:21.479381000 +01:00
