@@ -103,13 +103,13 @@
 - !ruby/object:Pathname
   path: dist/material-cards.css
 - !ruby/object:Pathname
+  path: images/20241212_Cut_Throat_Sarah_Winter_Yellow_Green_080d96ba-2737-46cc-ba16-b627c87c62dc_256x256.jpg
+- !ruby/object:Pathname
   path: images/4sight.jpg
 - !ruby/object:Pathname
   path: images/AventineSolutions2024-1094x523.png
 - !ruby/object:Pathname
   path: images/Bookshelves_23042017-DSC04769.jpg
-- !ruby/object:Pathname
-  path: images/Cut_Throat_Sarah_End_of_Summer_5485c3b6-65b3-45f6-810b-7c3aeb9fd8d1_256x256.jpg
 - !ruby/object:Pathname
   path: images/agile.jpg
 - !ruby/object:Pathname
@@ -204,4 +204,4 @@
   path: images/zend.jpg
 :bucket: aventine-responsive
 :action: :deployed
-:executed: 2024-09-02 14:25:11.258427835 +02:00
+:executed: 2025-01-03 16:51:20.189264000 +01:00
