@@ -9112,6 +9112,9 @@ button.close {
   width: 150%;
   height: 105%;
 }
+.material-card .img-top-margin {
+  margin-top: 2.5em;
+}
 .material-card.mc-active .img-container {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
