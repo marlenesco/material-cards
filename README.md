@@ -134,6 +134,10 @@ Kill the webpack process if it is watching the files then do ...
 rake --trace
 ```
 ## Deploying to Google Cloud using the Ruby API
+* For MacOS, ensure that the Google Cloud CLI is installed
+```shell
+brew install --cask google-cloud-sdk
+```
 * GCP Ruby API requires the "application default" login
 ```shell
 gcloud auth application-default login
