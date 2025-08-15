@@ -103,10 +103,6 @@
 - !ruby/object:Pathname
   path: dist/material-cards.css
 - !ruby/object:Pathname
-  path: images/20241212_Cut_Throat_Sarah_Winter_Yellow_Green_080d96ba-2737-46cc-ba16-b627c87c62dc_256x256.jpg
-- !ruby/object:Pathname
-  path: images/20250103_Amsterdam_750_Jaar_Banner_Kyle_Spence_Aventine_Responsive_256x255.jpg
-- !ruby/object:Pathname
   path: images/4sight.jpg
 - !ruby/object:Pathname
   path: images/AventineSolutions2024-1094x523.png
@@ -114,6 +110,10 @@
   path: images/Bookshelves_23042017-DSC04769.jpg
 - !ruby/object:Pathname
   path: images/Luminis-256x256.png
+- !ruby/object:Pathname
+  path: images/Pride Progress Flag Abstract One 256x256.png
+- !ruby/object:Pathname
+  path: images/Pride Psychedelic Cowboy e50b5a7b-5feb-4d42-aebc-9ed60e5d1d6f 256x256.jpg
 - !ruby/object:Pathname
   path: images/agile.jpg
 - !ruby/object:Pathname
@@ -208,4 +208,4 @@
   path: images/zend.jpg
 :bucket: aventine-responsive
 :action: :deployed
-:executed: 2025-01-07 11:57:27.217499000 +01:00
+:executed: 2025-08-15 17:33:00.623476000 +02:00
