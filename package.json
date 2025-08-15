@@ -42,6 +42,7 @@
     "jquery": "3.2.1",
     "jquery-bridget": "2.0.1",
     "masonry-layout": "4.2.1",
-    "popper": "1.0.1"
+    "popper": "1.0.1",
+    "yarn": "^1.22.22"
   }
 }
