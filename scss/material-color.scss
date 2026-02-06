@@ -1,0 +1,94 @@
+@use "gm-variables" as *;
+
+@mixin material-card-color($palette-name, $c50, $c100, $c500, $c900) {
+  .material-card.#{$palette-name} {
+    h2 {
+      background-color: $c500;
+
+      &:after {
+        border-top-color: $c500;
+        border-right-color: $c500;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+      }
+
+      &:before {
+        border-top-color: transparent;
+        border-right-color: $c900;
+        border-bottom-color: $c900;
+        border-left-color: transparent;
+      }
+    }
+
+    &.mc-active {
+      h2 {
+        &:before {
+          border-top-color: transparent;
+          border-right-color: $c500;
+          border-bottom-color: $c500;
+          border-left-color: transparent;
+        }
+
+        &:after {
+          border-top-color: $c900;
+          border-right-color: $c900;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+        }
+      }
+    }
+
+    .mc-btn-action {
+      background-color: $c500;
+
+      &:hover {
+        background-color: $c900;
+      }
+    }
+
+    .mc-footer {
+      h4 {
+        color: $c900;
+      }
+
+      a {
+        background-color: $c900;
+      }
+    }
+
+    &.mc-active {
+      .mc-content {
+        background-color: $c50;
+      }
+
+      .mc-footer {
+        background-color: $c100;
+      }
+
+      .mc-btn-action {
+        border-color: $c50;
+      }
+    }
+  }
+}
+
+@include material-card-color("Red", $gm-Red-50, $gm-Red-100, $gm-Red-500, $gm-Red-900);
+@include material-card-color("Blue-Grey", $gm-Blue-Grey-50, $gm-Blue-Grey-100, $gm-Blue-Grey-500, $gm-Blue-Grey-900);
+@include material-card-color("Pink", $gm-Pink-50, $gm-Pink-100, $gm-Pink-500, $gm-Pink-900);
+@include material-card-color("Purple", $gm-Purple-50, $gm-Purple-100, $gm-Purple-500, $gm-Purple-900);
+@include material-card-color("Deep-Purple", $gm-Deep-Purple-50, $gm-Deep-Purple-100, $gm-Deep-Purple-500, $gm-Deep-Purple-900);
+@include material-card-color("Indigo", $gm-Indigo-50, $gm-Indigo-100, $gm-Indigo-500, $gm-Indigo-900);
+@include material-card-color("Blue", $gm-Blue-50, $gm-Blue-100, $gm-Blue-500, $gm-Blue-900);
+@include material-card-color("Light-Blue", $gm-Light-Blue-50, $gm-Light-Blue-100, $gm-Light-Blue-500, $gm-Light-Blue-900);
+@include material-card-color("Cyan", $gm-Cyan-50, $gm-Cyan-100, $gm-Cyan-500, $gm-Cyan-900);
+@include material-card-color("Teal", $gm-Teal-50, $gm-Teal-100, $gm-Teal-500, $gm-Teal-900);
+@include material-card-color("Green", $gm-Green-50, $gm-Green-100, $gm-Green-500, $gm-Green-900);
+@include material-card-color("Light-Green", $gm-Light-Green-50, $gm-Light-Green-100, $gm-Light-Green-500, $gm-Light-Green-900);
+@include material-card-color("Lime", $gm-Lime-50, $gm-Lime-100, $gm-Lime-500, $gm-Lime-900);
+@include material-card-color("Yellow", $gm-Yellow-50, $gm-Yellow-100, $gm-Yellow-500, $gm-Yellow-900);
+@include material-card-color("Amber", $gm-Amber-50, $gm-Amber-100, $gm-Amber-500, $gm-Amber-900);
+@include material-card-color("Orange", $gm-Orange-50, $gm-Orange-100, $gm-Orange-500, $gm-Orange-900);
+@include material-card-color("Deep-Orange", $gm-Deep-Orange-50, $gm-Deep-Orange-100, $gm-Deep-Orange-500, $gm-Deep-Orange-900);
+@include material-card-color("Brown", $gm-Brown-50, $gm-Brown-100, $gm-Brown-500, $gm-Brown-900);
+@include material-card-color("Grey", $gm-Grey-50, $gm-Grey-100, $gm-Grey-500, $gm-Grey-900);
+@include material-card-color("Blue-Grey", $gm-Blue-Grey-50, $gm-Blue-Grey-100, $gm-Blue-Grey-500, $gm-Blue-Grey-900);
