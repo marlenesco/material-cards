@@ -4,6 +4,8 @@ Simple user card component inspired by the Google Material color palette, built 
 
 [Working demo on CodePen](https://codepen.io/marlenesco/full/NqOozj)
 
+[![See full preview](https://material-cards.s3.eu-west-1.amazonaws.com/preview.jpg)](http://codepen.io/marlenesco/full/NqOozj/)
+
 ## Project structure
 
 - `js/jquery.material-cards.js`: jQuery plugin source
