@@ -1,0 +1,32 @@
+{
+  "name": "material-cards",
+  "version": "1.1.0",
+  "description": "Card style based on Google Material color palette",
+  "license": "MIT",
+  "homepage": "https://github.com/marlenesco/material-cards",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marlenesco/material-cards.git"
+  },
+  "author": {
+    "name": "David Foliti",
+    "url": "https://twitter.com/marlenesco"
+  },
+  "files": [
+    "dist",
+    "js",
+    "scss",
+    "README.md",
+    "LICENSE",
+    "bower.json"
+  ],
+  "scripts": {
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "sass --no-source-map scss/material-cards.scss dist/material-cards.css && sass --no-source-map scss/material-cards-auto-height.scss dist/material-cards-auto-height.css",
+    "build:js": "terser js/jquery.material-cards.js -c -m -o js/jquery.material-cards.min.js"
+  },
+  "devDependencies": {
+    "sass": "^1.93.2",
+    "terser": "^5.39.0"
+  }
+}
