@@ -17,8 +17,7 @@
     "js",
     "scss",
     "README.md",
-    "LICENSE",
-    "bower.json"
+    "LICENSE"
   ],
   "scripts": {
     "build": "npm run build:css && npm run build:js",

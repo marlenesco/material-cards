@@ -35,14 +35,6 @@ npm run build:css
 npm run build:js
 ```
 
-### Legacy workflow (deprecated)
-
-This package still includes `bower.json` for backward compatibility:
-
-```bash
-bower install material-cards
-```
-
 ## Usage
 
 ```javascript
