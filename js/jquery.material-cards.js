@@ -46,8 +46,9 @@
     MaterialCard.prototype.getTransitionTiming = function () {
         var duration = 0;
         this.card.find('*').each(function () {
-            if ( (transitionDurationToMilliseconds($(this).css('transition-duration')) + transitionDurationToMilliseconds($(this).css('transition-delay'))) > duration) {
-                duration = (transitionDurationToMilliseconds($(this).css('transition-duration')) + transitionDurationToMilliseconds($(this).css('transition-delay')));
+            var totalDuration = transitionDurationToMilliseconds($(this).css('transition-duration')) + transitionDurationToMilliseconds($(this).css('transition-delay'));
+            if (totalDuration > duration) {
+                duration = totalDuration;
             }
         });
         return duration;
@@ -87,24 +88,39 @@
     };
 
     var transitionDurationToMilliseconds = function(duration) {
-        var pieces = duration.match(/^([\d\.]+)(\w+)$/),
-            time, unit, multiplier;
+        if (!duration || typeof duration !== 'string') {
+            return 0;
+        }
 
-        if (pieces.length <= 1) {
-            return duration;
-        }
-        time = pieces[1];
-        unit = pieces[2];
-        switch(unit) {
-            case 'ms': multiplier = 1;
-                break;
-            case 's': multiplier = 1000;
-                break;
-        }
-        return time * multiplier;
+        var maxDuration = 0;
+
+        $.each(duration.split(','), function (_, item) {
+            var value = $.trim(item);
+            var pieces = value.match(/^([\d\.]+)(ms|s)$/);
+
+            if (!pieces || pieces.length <= 1) {
+                return;
+            }
+
+            var time = parseFloat(pieces[1]);
+            var unit = pieces[2];
+            var multiplier = unit === 's' ? 1000 : 1;
+            var currentDuration = time * multiplier;
+
+            if (currentDuration > maxDuration) {
+                maxDuration = currentDuration;
+            }
+        });
+
+        return maxDuration;
     };
 
     var Plugin = function (options) {
+        if (typeof options === 'string' && options === 'isOpen') {
+            var instance = this.first().data('material-card');
+            return instance ? instance.isOpen() : false;
+        }
+
         return this.each(function () {
             var $this    = $(this);
             var $MCData    = $this.data('material-card');
@@ -114,7 +130,7 @@
                 $this.data('material-card', ($MCData = new MaterialCard(this, $options)));
             }
 
-            if (typeof options == 'string') {
+            if (typeof options == 'string' && typeof $MCData[options] === 'function') {
                 $MCData[options]();
             }
         })
