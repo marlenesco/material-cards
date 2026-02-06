@@ -7,7 +7,7 @@
   ],
   "description": "Card style based on Google Material color palette",
   "main": [
-    "less/material-cards.less",
+    "scss/material-cards.scss",
     "js/jquery.material-cards.js"
   ],
   "keywords": [
@@ -28,7 +28,7 @@
     "demo"
   ],
   "dependencies": {
-    "jquery": "~1",
+    "jquery": ">=1.11.3",
     "font-awesome": "~4"
   },
   "repository": {
