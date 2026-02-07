@@ -1,28 +1,3 @@
-.fa-spin-fast {
-  -webkit-animation: fa-spin-fast 0.2s infinite linear;
-  animation: fa-spin-fast 0.2s infinite linear;
-}
-
-@-webkit-keyframes fa-spin-fast {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@keyframes fa-spin-fast {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
 .material-card.Red h2 {
   background-color: #F44336;
 }
@@ -1034,6 +1009,13 @@
   display: block;
   font-size: 0.8em;
 }
+.material-card h2 strong .mc-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  vertical-align: -0.18em;
+  margin-right: 0.2em;
+}
 .material-card h2:before, .material-card h2:after {
   content: " ";
   position: absolute;
@@ -1083,13 +1065,16 @@
   position: absolute;
   right: 16px;
   top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
   border: 5px solid;
   width: 54px;
   height: 54px;
-  line-height: 44px;
+  line-height: 1;
   text-align: center;
   color: #fff;
   cursor: pointer;
@@ -1099,6 +1084,46 @@
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+.material-card .mc-btn-action .mc-toggle-icon {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 16px;
+}
+.material-card .mc-btn-action .mc-toggle-icon__line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: currentColor;
+  -webkit-transition: all 0.28s;
+  -moz-transition: all 0.28s;
+  -ms-transition: all 0.28s;
+  -o-transition: all 0.28s;
+  transition: all 0.28s;
+}
+.material-card .mc-btn-action .mc-toggle-icon__line--top {
+  top: 0;
+}
+.material-card .mc-btn-action .mc-toggle-icon__line--middle {
+  top: 7px;
+}
+.material-card .mc-btn-action .mc-toggle-icon__line--bottom {
+  top: 14px;
+}
+.material-card .mc-btn-action.mc-btn-action-open .mc-toggle-icon__line--top {
+  top: 7px;
+  transform: rotate(45deg);
+}
+.material-card .mc-btn-action.mc-btn-action-open .mc-toggle-icon__line--middle {
+  opacity: 0;
+  transform: scaleX(0.2);
+}
+.material-card .mc-btn-action.mc-btn-action-open .mc-toggle-icon__line--bottom {
+  top: 7px;
+  transform: rotate(-45deg);
 }
 .material-card.mc-active .mc-btn-action {
   top: 62px;
@@ -1142,7 +1167,9 @@
   transition: all 1.4s;
 }
 .material-card .mc-footer a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   float: left;
   position: relative;
   width: 52px;
@@ -1151,7 +1178,7 @@
   margin-bottom: 15px;
   font-size: 28px;
   color: #fff;
-  line-height: 52px;
+  line-height: 1;
   text-decoration: none;
   top: 200px;
 }
@@ -1190,6 +1217,11 @@
   -o-transition: all 0.9s;
   transition: all 0.9s;
 }
+.material-card .mc-footer a .mc-icon {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
 .material-card .img-container {
   overflow: hidden;
   position: absolute;
@@ -1203,6 +1235,12 @@
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
+}
+.material-card .mc-img-responsive {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 .material-card.mc-active .img-container {
   -webkit-border-radius: 50%;
