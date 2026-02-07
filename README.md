@@ -1,87 +1,129 @@
 # Material Cards
 
-Simple user card component inspired by the Google Material color palette, built with jQuery + SCSS.
+Material card component inspired by the Google Material color palette, built with vanilla JavaScript + SCSS.
 
 [Working demo on CodePen](https://codepen.io/marlenesco/full/NqOozj)
 
 [![See full preview](https://material-cards.s3.eu-west-1.amazonaws.com/preview.jpg)](http://codepen.io/marlenesco/full/NqOozj/)
 
-## Project structure
-
-- `js/jquery.material-cards.js`: jQuery plugin source
-- `js/jquery.material-cards.min.js`: minified plugin (legacy artifact)
-- `scss/material-cards.scss`: main SCSS entrypoint
-- `scss/material-cards-auto-height.scss`: variant for dynamic heights (Masonry demo)
-- `dist/material-cards.css`: compiled CSS
-- `dist/material-cards-auto-height.css`: compiled CSS (auto-height variant)
-- `demo/`: static demos
-
 ## Installation
 
-### Modern workflow (recommended)
-
 ```bash
-npm install
+npm install material-cards
 ```
 
-Build CSS and minified JS:
+## Quick start
 
-```bash
-npm run build
+```html
+<link rel="stylesheet" href="material-cards/css">
+
+<article class="material-card Red">
+  <h2>
+    <span>Christopher Walken</span>
+    <strong>
+      <svg class="mc-icon" aria-hidden="true">
+        <use href="material-cards/icons#mc-icon-star"></use>
+      </svg>
+      The Deer Hunter
+    </strong>
+  </h2>
+
+  <div class="mc-content">
+    <div class="img-container"></div>
+    <div class="mc-description">...</div>
+  </div>
+
+  <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
+
+  <div class="mc-footer">
+    <h4>Social</h4>
+    <a href="#" aria-label="Facebook">
+      <svg class="mc-icon" aria-hidden="true">
+        <use href="material-cards/icons#mc-icon-facebook"></use>
+      </svg>
+    </a>
+  </div>
+</article>
+
+<script src="material-cards"></script>
+<script>
+  window.MaterialCards.initMaterialCards('.material-card');
+</script>
 ```
 
-During development:
+## API
 
-```bash
-npm run build:css
-npm run build:js
+### `initMaterialCards(target?, options?)`
+
+- `target`: selector, single element, NodeList, or array of elements
+- `options`:
+  - `cardActivator` (`click` or `hover`, default: `click`)
+  - `buttonSelector` (default: `.mc-btn-action`)
+
+`mc-btn-action` uses a built-in morph animation (hamburger -> `X` -> hamburger).
+
+```js
+const cards = window.MaterialCards.initMaterialCards('.material-card', {
+  cardActivator: 'click'
+});
+
+cards[0].open();
+cards[0].close();
+cards[0].toggle();
+const isOpen = cards[0].isOpen();
 ```
 
-## Usage
+Use `mc-img-responsive` for card images:
 
-```javascript
-$('.material-card').materialCard(options);
-```
-
-### Options
-
-```javascript
-const options = {
-  icon_close: 'fa-arrow-left',
-  icon_open: 'fa-bars',
-  icon_spin: 'fa-spin-fast',
-  card_activator: 'click' // 'click' or 'hover'
-};
-```
-
-### Methods
-
-```javascript
-$('.material-card').materialCard('toggle');
-$('.material-card').materialCard('open');
-$('.material-card').materialCard('close');
-
-const isOpen = $('.material-card:eq(0)').materialCard('isOpen');
+```html
+<img class="mc-img-responsive" src="..." alt="">
 ```
 
 ### Events
+
+Each card dispatches:
 
 - `show.material-card`
 - `shown.material-card`
 - `hide.material-card`
 - `hidden.material-card`
 
-```javascript
-$('.material-card').on(
-  'show.material-card shown.material-card hide.material-card hidden.material-card',
-  function (event) {
-    console.log(event.type, $(this));
-  }
-);
+```js
+document.querySelector('.material-card').addEventListener('shown.material-card', (event) => {
+  console.log(event.type, event.currentTarget);
+});
 ```
 
-## Notes
+## Package exports
 
-- Demo pages use HTTPS CDN links and work with modern jQuery.
-- Source of truth for styles is `scss/`; run `npm run build:css` to refresh the CSS build.
-- Source of truth for script is `js/jquery.material-cards.js`; run `npm run build:js` to refresh the minified file.
+- `material-cards` -> JS API (`js/material-cards.js`)
+- `material-cards/css` -> main CSS (`dist/material-cards.css`)
+- `material-cards/css/auto-height` -> auto-height CSS (`dist/material-cards-auto-height.css`)
+- `material-cards/icons` -> SVG sprite (`assets/icons.svg`)
+
+## Development
+
+```bash
+npm install
+npm run build
+```
+
+Build targets:
+
+- `dist/material-cards.css`
+- `dist/material-cards-auto-height.css`
+- `js/material-cards.min.js`
+
+## Local demos
+
+- `demo/material-cards_simple.html`
+- `demo/material-cards_api.html`
+- `demo/material-cards_masonry.html`
+
+## Migration notes
+
+If you are upgrading from the old jQuery plugin, see `MIGRATION.md`.
+
+## Release
+
+Follow `RELEASE_CHECKLIST.md` before publishing.
