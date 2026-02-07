@@ -1,7 +1,7 @@
 {
   "name": "material-cards",
-  "version": "1.1.0",
-  "description": "Card style based on Google Material color palette",
+  "version": "2.0.0",
+  "description": "Material card component with vanilla JavaScript and local SVG icons",
   "license": "MIT",
   "homepage": "https://github.com/marlenesco/material-cards",
   "repository": {
@@ -16,13 +16,30 @@
     "dist",
     "js",
     "scss",
+    "assets",
     "README.md",
+    "RELEASE_CHECKLIST.md",
+    "CHANGELOG.md",
+    "MIGRATION.md",
     "LICENSE"
   ],
+  "main": "js/material-cards.js",
+  "types": "js/material-cards.d.ts",
+  "exports": {
+    ".": {
+      "types": "./js/material-cards.d.ts",
+      "import": "./js/material-cards.js",
+      "require": "./js/material-cards.js",
+      "default": "./js/material-cards.js"
+    },
+    "./css": "./dist/material-cards.css",
+    "./css/auto-height": "./dist/material-cards-auto-height.css",
+    "./icons": "./assets/icons.svg"
+  },
   "scripts": {
     "build": "npm run build:css && npm run build:js",
     "build:css": "sass --no-source-map scss/material-cards.scss dist/material-cards.css && sass --no-source-map scss/material-cards-auto-height.scss dist/material-cards-auto-height.css",
-    "build:js": "terser js/jquery.material-cards.js -c -m -o js/jquery.material-cards.min.js"
+    "build:js": "terser js/material-cards.js -c -m -o js/material-cards.min.js"
   },
   "devDependencies": {
     "sass": "^1.93.2",
