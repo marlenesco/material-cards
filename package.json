@@ -2,8 +2,18 @@
   "name": "material-cards",
   "version": "2.0.0",
   "description": "Material card component with vanilla JavaScript and local SVG icons",
+  "keywords": [
+    "cards",
+    "material-design",
+    "component",
+    "scss",
+    "vanilla-js"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/marlenesco/material-cards",
+  "bugs": {
+    "url": "https://github.com/marlenesco/material-cards/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/marlenesco/material-cards.git"
@@ -18,11 +28,13 @@
     "scss",
     "assets",
     "README.md",
-    "RELEASE_CHECKLIST.md",
     "CHANGELOG.md",
     "MIGRATION.md",
     "LICENSE"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "js/material-cards.js",
   "types": "js/material-cards.d.ts",
   "exports": {
