@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="msapplication-tap-highlight" content="no">
 
-    <title>Material Cards | Simple Demo</title>
+    <title>Material Cards | jQuery Plugin Demo</title>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../dist/material-cards.css">
@@ -34,8 +34,8 @@
 <body>
 <section class="container">
     <div class="page-header">
-        <h1>Material cards<br>
-            <small>material cards with a simple vanilla script</small></h1>
+        <h1>Material cards with vanilla API<br>
+            <small>material-cards.js lets you manage options, events and methods for your cards</small></h1>
     </div>
     <div class="row active-with-click">
         <div class="col-md-4 col-sm-6 col-xs-12">
@@ -125,6 +125,8 @@
                 </div>
             </article>
         </div>
+    <!--</div>-->
+    <!--<div class="row active-with-hover">-->
         <div class="col-md-4 col-sm-6 col-xs-12">
             <article class="material-card Deep-Purple">
                 <h2>
@@ -594,8 +596,29 @@
 
 <script src="../js/material-cards.min.js"></script>
 <script>
-    window.MaterialCards.initMaterialCards('.material-card', {
+    var cards = window.MaterialCards.initMaterialCards('.material-card', {
         cardActivator: 'click'
+    });
+
+    window.setTimeout(function() {
+        if (cards[1]) {
+            cards[1].open();
+        }
+    }, 2000);
+
+    document.querySelectorAll('.material-card').forEach(function(cardElement) {
+        cardElement.addEventListener('shown.material-card', function(event) {
+            console.log(event.type, event.currentTarget);
+        });
+        cardElement.addEventListener('show.material-card', function(event) {
+            console.log(event.type, event.currentTarget);
+        });
+        cardElement.addEventListener('hide.material-card', function(event) {
+            console.log(event.type, event.currentTarget);
+        });
+        cardElement.addEventListener('hidden.material-card', function(event) {
+            console.log(event.type, event.currentTarget);
+        });
     });
 </script>
 </body>
