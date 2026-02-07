@@ -9,7 +9,6 @@
     <title>Material Cards | jQuery Plugin Demo</title>
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,200,500,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../dist/material-cards-auto-height.css">
     <style type="text/css">
 
@@ -40,8 +39,8 @@
 <body>
 <section class="container">
     <div class="page-header">
-        <h1>Material cards with proper jquery plugin and Masonry library<br>
-            <small>jquery.material-cards.js with awesome Masonry grid library</small></h1>
+        <h1>Material cards with vanilla API and Masonry<br>
+            <small>material-cards.js with Masonry grid layout</small></h1>
     </div>
     <div class="row active-with-click grid">
         <div class="grid-item">
@@ -49,13 +48,13 @@
                 <h2>
                     <span>Christopher Walken</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         The Deer Hunter
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-christopher-walken.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-christopher-walken.jpg">
                     </div>
                     <div class="mc-description">
                         He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
@@ -63,17 +62,15 @@
                         He has appeared in more than 100 films and television shows, including The Deer Hunter, Annie Hall, The Prophecy trilogy, The Dogs of War ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -82,29 +79,27 @@
                 <h2>
                     <span>Sean Penn</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Mystic River
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-sean-penn.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-sean-penn.jpg">
                     </div>
                     <div class="mc-description">
                         He has won two Academy Awards, for his roles in the mystery drama Mystic River (2003) and the biopic Milk (2008). Penn began his acting career in television with a brief appearance in a 1974 episode of Little House on the Prairie ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -113,30 +108,28 @@
                 <h2>
                     <span>Clint Eastwood</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Million Dollar Baby
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-clint-eastwood.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-clint-eastwood.jpg">
                     </div>
                     <div class="mc-description">
                         He rose to international fame with his role as the Man with No Name in Sergio Leone's Dollars trilogy of spaghetti Westerns during the 1960s ...
                         He rose to international fame with his role as the Man with No Name in Sergio Leone's Dollars trilogy of spaghetti Westerns during the 1960s ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -147,13 +140,13 @@
                 <h2>
                     <span>Dustin Hoffman</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Kramer vs. Kramer
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-dustin-hoffman.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-dustin-hoffman.jpg">
                     </div>
                     <div class="mc-description">
                         He has been known for his versatile portrayals of antiheroes and vulnerable characters.[3] He won the Academy Award for Kramer vs. Kramer in 1979 ...
@@ -161,17 +154,15 @@
                         He has been known for his versatile portrayals of antiheroes and vulnerable characters.[3] He won the Academy Award for Kramer vs. Kramer in 1979 ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -180,29 +171,27 @@
                 <h2>
                     <span>Edward Norton</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         American History X
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-edward-norton.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-edward-norton.jpg">
                     </div>
                     <div class="mc-description">
                         He has been nominated for three Academy Awards for his work in the films Primal Fear, American History X and Birdman. He also starred in other roles ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -211,30 +200,28 @@
                 <h2>
                     <span>Michael Caine</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Educated Rita
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-michael-caine.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-michael-caine.jpg">
                     </div>
                     <div class="mc-description">
                         English actor and author. Renowned for his distinctive working class cockney accent, Caine has appeared in over 115 films and is regarded as a British ...
                         English actor and author. Renowned for his distinctive working class cockney accent, Caine has appeared in over 115 films and is regarded as a British ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -243,13 +230,13 @@
                 <h2>
                     <span>Harvey Keitel</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Pulp Fiction
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-harvey-keitel.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-harvey-keitel.jpg">
                     </div>
                     <div class="mc-description">
                         Some of his most notable starring roles were in Martin Scorsese's Mean Streets and Taxi Driver, Ridley Scott's The Duellists and Thelma & Louise, Quentin Tarantino ...
@@ -257,17 +244,15 @@
                         Some of his most notable starring roles were in Martin Scorsese's Mean Streets and Taxi Driver, Ridley Scott's The Duellists and Thelma & Louise, Quentin Tarantino ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -276,30 +261,28 @@
                 <h2>
                     <span>Jack Nicholson</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         The Shining
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-jack-nicholson.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-jack-nicholson.jpg">
                     </div>
                     <div class="mc-description">
                         Throughout his career, Nicholson has portrayed unique and challenging roles, many of which include dark portrayals of excitable, neurotic and psychopathic characters ...
                         Throughout his career, Nicholson has portrayed unique and challenging roles, many of which include dark portrayals of excitable, neurotic and psychopathic characters ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -308,13 +291,13 @@
                 <h2>
                     <span>Jeff Bridges</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         The Big Lebowski
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-jeff-bridges.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-jeff-bridges.jpg">
                     </div>
                     <div class="mc-description">
                         He comes from a well-known acting family and began his televised acting in 1958 as a child with his father, Lloyd Bridges, and brother, Beau, on television's Sea Hunt ...
@@ -322,17 +305,15 @@
                         He comes from a well-known acting family and began his televised acting in 1958 as a child with his father, Lloyd Bridges, and brother, Beau, on television's Sea Hunt ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -341,30 +322,28 @@
                 <h2>
                     <span>Joaquin Phoenix</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Her
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-joaquin-phoenix.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-joaquin-phoenix.jpg">
                     </div>
                     <div class="mc-description">
                         is an American actor, producer, music video director, musician and activist. For his work as an artist, Phoenix has received a Grammy Award, a Golden Globe Award and three Academy ...
                         is an American actor, producer, music video director, musician and activist. For his work as an artist, Phoenix has received a Grammy Award, a Golden Globe Award and three Academy ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -373,13 +352,13 @@
                 <h2>
                     <span>Tom Hanks</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Forrest Gump
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-tom-hanks.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-tom-hanks.jpg">
                     </div>
                     <div class="mc-description">
                         He is known for his roles in Big (1988), Philadelphia (1993), Forrest Gump (1994), Apollo 13 (1995), Saving Private Ryan, You've Got Mail (both 1998), The Green Mile (1999), Cast Away (2000) ...
@@ -389,17 +368,15 @@
                         He is known for his roles in Big (1988), Philadelphia (1993), Forrest Gump (1994), Apollo 13 (1995), Saving Private Ryan, You've Got Mail (both 1998), The Green Mile (1999), Cast Away (2000) ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -408,29 +385,27 @@
                 <h2>
                     <span>Philip Seymour Hoffman</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         25th Hour
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-philip-seymour-hoffman.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-philip-seymour-hoffman.jpg">
                     </div>
                     <div class="mc-description">
                         Best known for his distinctive supporting and character roles – typically lowlifes, bullies, and misfits – Hoffman was a regular presence in films from the early 1990s until his death at age 46.
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -439,30 +414,28 @@
                 <h2>
                     <span>Paul Newman</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         The Color of Money
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-paul-newman.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-paul-newman.jpg">
                     </div>
                     <div class="mc-description">
                         He won numerous awards, including an Academy Award for his performance in the 1986 film The Color of Money,[3] a BAFTA Award, a Screen Actors Guild Award, a Cannes Film Festival Award, an Emmy Award ...
                         He won numerous awards, including an Academy Award for his performance in the 1986 film The Color of Money,[3] a BAFTA Award, a Screen Actors Guild Award, a Cannes Film Festival Award, an Emmy Award ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -471,13 +444,13 @@
                 <h2>
                     <span>Marlon Brando</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         The Godfather
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-marlon-brando.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-marlon-brando.jpg">
                     </div>
                     <div class="mc-description">
                         He is hailed for bringing a gripping realism to film acting, and is frequently cited as the greatest and most influential actor of all time.[2] A cultural icon, Brando is most famous for his Academy ...
@@ -486,17 +459,15 @@
                         He is hailed for bringing a gripping realism to film acting, and is frequently cited as the greatest and most influential actor of all time.[2] A cultural icon, Brando is most famous for his Academy ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -505,30 +476,28 @@
                 <h2>
                     <span>Kevin Spacey</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         American Beauty
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-kevin-spacey.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-kevin-spacey.jpg">
                     </div>
                     <div class="mc-description">
                         He began his career as a stage actor during the 1980s, before being cast in supporting roles in film and television. He gained critical acclaim in the early 1990s, culminating in his first Academy Award ...
                         He began his career as a stage actor during the 1980s, before being cast in supporting roles in film and television. He gained critical acclaim in the early 1990s, culminating in his first Academy Award ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -537,29 +506,27 @@
                 <h2>
                     <span>Robert De Niro</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Taxy Driver
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-robert-de-niro.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-robert-de-niro.jpg">
                     </div>
                     <div class="mc-description">
                         His first major film roles were in the sports drama Bang the Drum Slowly (1973) and Martin Scorsese's crime film Mean Streets (1973). In 1974, after being turned down for the role of Sonny Corleone in the crime ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -568,30 +535,28 @@
                 <h2>
                     <span>Steve Mcqueen</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Papillon
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-steve-mcqueen.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-steve-mcqueen.jpg">
                     </div>
                     <div class="mc-description">
                         Called "The King of Cool", his "anti-hero" persona, developed at the height of the Vietnam War-era counterculture, made him a top box-office draw of the 1960s and 1970s. McQueen received an Academy Award nomination for his ...
                         Called "The King of Cool", his "anti-hero" persona, developed at the height of the Vietnam War-era counterculture, made him a top box-office draw of the 1960s and 1970s. McQueen received an Academy Award nomination for his ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -600,30 +565,28 @@
                 <h2>
                     <span>Rugter Hauer</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Blade Runner
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-rugter-hauer.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-rugter-hauer.jpg">
                     </div>
                     <div class="mc-description">
                         Blonde, blue-eyed, tall and handsome Dutch actor Rutger Hauer has an international reputation for playing everything from romantic leads to action heroes to sinister villains. Hauer was born in Breukelen, a town in the province ...
                         Blonde, blue-eyed, tall and handsome Dutch actor Rutger Hauer has an international reputation for playing everything from romantic leads to action heroes to sinister villains. Hauer was born in Breukelen, a town in the province ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
@@ -632,13 +595,13 @@
                     <h2>
                     <span>Morgan Freeman</span>
                     <strong>
-                        <i class="fa fa-fw fa-star"></i>
+                        <svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-star"></use></svg>
                         Glory
                     </strong>
                 </h2>
                 <div class="mc-content">
                     <div class="img-container">
-                        <img class="img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-morgan-freeman.jpg">
+                        <img class="mc-img-responsive" src="https://material-cards.s3-eu-west-1.amazonaws.com/thumb-morgan-freeman.jpg">
                     </div>
                     <div class="mc-description">
                         Freeman has received Academy Award nominations for his performances in Street Smart, Driving Miss Daisy, The Shawshank Redemption and Invictus ...
@@ -646,40 +609,39 @@
                         Freeman has received Academy Award nominations for his performances in Street Smart, Driving Miss Daisy, The Shawshank Redemption and Invictus ...
                     </div>
                 </div>
-                <a class="mc-btn-action">
-                    <i class="fa fa-bars"></i>
-                </a>
+                <a class="mc-btn-action" role="button" aria-label="Toggle details"></a>
                 <div class="mc-footer">
                     <h4>
-                        Social
+                        Links
                     </h4>
-                    <a class="fa fa-fw fa-facebook"></a>
-                    <a class="fa fa-fw fa-twitter"></a>
-                    <a class="fa fa-fw fa-linkedin"></a>
-                    <a class="fa fa-fw fa-google-plus"></a>
+                    <a href="#" aria-label="Facebook"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-facebook"></use></svg></a>
+                    <a href="#" aria-label="Twitter"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-twitter"></use></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-linkedin"></use></svg></a>
+                    <a href="#" aria-label="Instagram"><svg class="mc-icon" aria-hidden="true"><use href="../assets/icons.svg#mc-icon-instagram"></use></svg></a>
                 </div>
             </article>
         </div>
     </div>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="../js/jquery.material-cards.min.js"></script>
+<script src="../js/material-cards.min.js"></script>
 <script src="https://unpkg.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
 <script>
-    $(function() {
-
-        var $grid = $('.grid').masonry({
+    var grid = document.querySelector('.grid');
+    var masonry = new Masonry(grid, {
             itemSelector: '.grid-item',
-            columnWidth: 390,
+            columnWidth: 390
+    });
+
+    window.MaterialCards.initMaterialCards('.material-card');
+
+    document.querySelectorAll('.material-card').forEach(function(cardElement) {
+        cardElement.addEventListener('shown.material-card', function() {
+            masonry.layout();
         });
-
-        $('.material-card').materialCard();
-
-        $('.material-card').on('shown.material-card hidden.material-card', function (event) {
-            $grid.masonry();
+        cardElement.addEventListener('hidden.material-card', function() {
+            masonry.layout();
         });
-
     });
 </script>
 </body>
