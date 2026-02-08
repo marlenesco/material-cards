@@ -22,6 +22,9 @@
     "name": "David Foliti",
     "url": "https://twitter.com/marlenesco"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "files": [
     "dist",
     "js",
@@ -51,10 +54,31 @@
   "scripts": {
     "build": "npm run build:css && npm run build:js",
     "build:css": "sass --no-source-map scss/material-cards.scss dist/material-cards.css && sass --no-source-map scss/material-cards-auto-height.scss dist/material-cards-auto-height.css",
-    "build:js": "terser js/material-cards.js -c -m -o js/material-cards.min.js"
+    "build:js": "terser js/material-cards.js -c -m -o js/material-cards.min.js",
+    "build:vnext": "npm run build -w @material-cards/core && npm run build -w @material-cards/react && npm run build -w @material-cards/vue && npm run build -w @material-cards/svelte",
+    "typecheck:vnext": "npm run typecheck -w @material-cards/core && npm run typecheck -w @material-cards/react && npm run typecheck -w @material-cards/vue && npm run typecheck -w @material-cards/svelte",
+    "test:vnext": "vitest run",
+    "smoke:next": "npm --prefix examples/next-demo install && npm --prefix examples/next-demo run build",
+    "smoke:vue": "npm --prefix examples/vue-demo install && npm --prefix examples/vue-demo run build",
+    "smoke:sveltekit": "npm --prefix examples/sveltekit-demo install && npm --prefix examples/sveltekit-demo run build",
+    "smoke:vnext": "npm run build:vnext && npm run smoke:next && npm run smoke:vue && npm run smoke:sveltekit",
+    "changeset": "changeset",
+    "version:vnext": "changeset version && npm install",
+    "release:vnext": "npm run build:vnext && changeset publish"
   },
   "devDependencies": {
     "sass": "^1.93.2",
-    "terser": "^5.39.0"
+    "terser": "^5.39.0",
+    "vitest": "^2.1.8",
+    "jsdom": "^25.0.1",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/svelte": "^5.2.6",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/compiler-sfc": "^3.5.13",
+    "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "@vitejs/plugin-vue": "^5.1.5",
+    "typescript": "^5.7.3",
+    "@changesets/cli": "^2.28.1"
   }
 }

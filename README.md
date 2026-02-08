@@ -108,6 +108,49 @@ npm install
 npm run build
 ```
 
+## Experimental multi-framework packages (vNext)
+
+The repository now includes a vNext scaffold with shared TypeScript models and framework adapters:
+
+- `packages/core` -> shared types and open-state contract
+- `packages/react` -> `MaterialCard` React component
+- `packages/vue` -> `MaterialCard` Vue 3 component
+- `packages/svelte` -> `MaterialCard` Svelte component
+
+Core API (aligned across frameworks):
+
+- `card`: title, subtitle, description, image, links, actions
+- `color`: palette token (`blue`, `teal`, etc.) or `custom`
+- `colorHex`: explicit color override
+- `isOpen` + `defaultOpen` + `onOpenChange`
+
+Icon strategy:
+
+- pass framework-native icon components (`Icon`/`icon`) for external libraries
+- or fallback to `iconName` for mapped/custom rendering
+
+Styling strategy:
+
+- CSS is component-local (`.module.css`, Vue scoped style, Svelte style block)
+- consumers only load style for imported card component
+
+Build and typecheck (vNext packages):
+
+```bash
+npm run build:vnext
+npm run typecheck:vnext
+npm run test:vnext
+npm run smoke:vnext
+```
+
+Release/versioning (vNext packages):
+
+```bash
+npm run changeset
+npm run version:vnext
+npm run release:vnext
+```
+
 Build targets:
 
 - `dist/material-cards.css`

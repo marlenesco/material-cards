@@ -1,0 +1,22 @@
+{
+  "name": "sveltekit-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "svelte-kit sync && svelte-kit build"
+  },
+  "dependencies": {
+    "@material-cards/core": "file:../../packages/core",
+    "@material-cards/svelte": "file:../../packages/svelte",
+    "@lucide/svelte": "^0.469.0",
+    "@sveltejs/kit": "^2.12.0",
+    "svelte": "^4.2.19"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^3.3.1",
+    "vite": "^5.4.11",
+    "typescript": "^5.7.3",
+    "@sveltejs/vite-plugin-svelte": "^3.1.2"
+  }
+}
