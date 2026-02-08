@@ -3,7 +3,6 @@ npm-debug.log*
 
 .idea
 /demo/codepen.html
-RELEASE_CHECKLIST.md
 packages/**/dist
 packages/svelte/.svelte-kit
 examples/**/node_modules
