@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "types": ["svelte"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.svelte", "src/**/*.d.ts"],
+  "exclude": ["src/**/*.test.ts"]
+}

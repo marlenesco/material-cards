@@ -1,0 +1,39 @@
+{
+  "name": "@material-cards/svelte",
+  "version": "1.0.0",
+  "description": "Svelte material card component",
+  "license": "MIT",
+  "type": "module",
+  "svelte": "./dist/MaterialCard.svelte",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/MaterialCard.svelte",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "svelte-package -i src -o dist --tsconfig ./tsconfig.json",
+    "typecheck": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "peerDependencies": {
+    "svelte": ">=4"
+  },
+  "dependencies": {
+    "@material-cards/core": "^2.0.3"
+  },
+  "devDependencies": {
+    "@sveltejs/package": "^2.3.8",
+    "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "svelte-check": "^4.1.1",
+    "typescript": "^5.7.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
