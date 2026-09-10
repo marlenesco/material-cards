@@ -4,10 +4,18 @@
   filter: alpha(opacity=#{$opacity-ie});
 }
 
-@mixin mc-transtition($duration: 0.3s) {
+@mixin mc-transition($duration: 0.3s) {
   -webkit-transition: all $duration;
   -moz-transition: all $duration;
   -ms-transition: all $duration;
   -o-transition: all $duration;
   transition: all $duration;
+}
+
+// Deprecated: misspelled alias kept for backwards compatibility.
+// `scss/` is published in the package `files` list, so external stylesheets
+// may still call this name. Remove in the next major release.
+@mixin mc-transtition($duration: 0.3s) {
+  @warn "mc-transtition() is deprecated and will be removed in the next major release. Use mc-transition() instead.";
+  @include mc-transition($duration);
 }
