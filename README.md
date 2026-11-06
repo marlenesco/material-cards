@@ -4,7 +4,7 @@ Material card component inspired by the Google Material color palette, built wit
 
 [Working demo on CodePen](https://codepen.io/marlenesco/full/NqOozj)
 
-[![See full preview](https://material-cards.s3.eu-west-1.amazonaws.com/preview.jpg)](http://codepen.io/marlenesco/full/NqOozj/)
+[![See full preview](https://cdn.jsdelivr.net/gh/marlenesco/material-cards@main/assets/images/preview.jpg)](https://codepen.io/marlenesco/full/NqOozj/)
 
 ## Installation
 
@@ -162,6 +162,8 @@ Build targets:
 - `demo/material-cards_simple.html`
 - `demo/material-cards_api.html`
 - `demo/material-cards_masonry.html`
+
+Demo images are stored in `assets/images` and use relative paths. See the [demo guide](demo/README.md) for local preview and CodePen image URLs.
 
 ## Migration notes
 
