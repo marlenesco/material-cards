@@ -1,6 +1,6 @@
 {
   "name": "material-cards",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Material card component with vanilla JavaScript and local SVG icons",
   "keywords": [
     "cards",
@@ -38,6 +38,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "overrides": {
+    "js-beautify": {
+      "glob": "^14.0.4",
+      "editorconfig": {
+        "minimatch": "^11.0.5"
+      }
+    }
+  },
   "main": "js/material-cards.js",
   "types": "js/material-cards.d.ts",
   "exports": {
@@ -69,16 +77,18 @@
   "devDependencies": {
     "sass": "^1.93.2",
     "terser": "^5.39.0",
-    "vitest": "^2.1.8",
+    "vitest": "^4.1.12",
     "jsdom": "^25.0.1",
     "@testing-library/react": "^16.2.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/svelte": "^5.2.6",
     "@vue/test-utils": "^2.4.6",
     "@vue/compiler-sfc": "^3.5.13",
-    "@sveltejs/vite-plugin-svelte": "^3.1.2",
-    "@vitejs/plugin-vue": "^5.1.5",
+    "@sveltejs/vite-plugin-svelte": "^6.2.4",
+    "@vitejs/plugin-vue": "^6.0.10",
     "typescript": "^5.7.3",
-    "@changesets/cli": "^2.28.1"
+    "@changesets/cli": "^2.28.1",
+    "vite": "^7.3.7",
+    "svelte": "^5.57.3"
   }
 }

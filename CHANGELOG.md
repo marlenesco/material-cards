@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.6 - 2026-11-06
+
+- Updated vulnerable development dependencies, including Vitest, Vite, Svelte, and tsup.
+- Applied targeted dependency overrides for patched glob, minimatch, and Next.js PostCSS versions.
+- Updated and locked the framework demo dependencies and migrated the SvelteKit demo to its patched major version.
+- Preserved the Vue CSS export path and corrected the Svelte package entry for named imports.
+- Documented the officially rejected deepmerge CVE that npm still reports.
+- Published JavaScript, CSS, and the vanilla public API are unchanged.
+
 ## 2.0.5 - 2026-11-06
 
 - Moved all demo images from S3 into the repository and updated the local demo paths.

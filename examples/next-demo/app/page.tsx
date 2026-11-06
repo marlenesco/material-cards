@@ -17,7 +17,7 @@ export default function HomePage() {
             src: "https://images.unsplash.com/photo-1477506350614-975d8d6b6d65?auto=format&fit=crop&w=900&q=80",
             alt: "Landscape"
           },
-          actions: [{ id: "fav", label: "Preferiti", Icon: Heart }],
+          actions: [{ id: "fav", label: "Preferiti", icon: <Heart aria-hidden /> }],
           links: [{ label: "Docs", href: "https://nextjs.org", target: "_blank" }]
         }}
       />

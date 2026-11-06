@@ -9,6 +9,7 @@ export default defineConfig({
       entry: resolve(__dirname, "src/index.ts"),
       name: "MaterialCardsVue",
       fileName: "material-cards-vue",
+      cssFileName: "style",
       formats: ["es", "umd"]
     },
     rollupOptions: {

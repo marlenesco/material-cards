@@ -24,7 +24,7 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "tsup": "^8.3.6",
+    "tsup": "^9.0.0",
     "typescript": "^5.7.3"
   },
   "publishConfig": {
