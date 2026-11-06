@@ -29,7 +29,7 @@
     "dist",
     "js",
     "scss",
-    "assets",
+    "assets/icons.svg",
     "README.md",
     "CHANGELOG.md",
     "MIGRATION.md",
