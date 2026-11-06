@@ -52,8 +52,7 @@ Before removing the bucket:
 3. Verify all 19 portraits in the live Pen and the README preview load from their
    new URLs, with no requests to the original bucket.
 4. Publish a new patch version of `material-cards` to update the README on npm.
-   The published `2.0.4` README still uses the S3 preview. npm only updates the
-   package page's README when a new version is published; see the
+   npm only updates the package page's README when a new version is published; see the
    [npm README documentation](https://docs.npmjs.com/about-package-readme-files/#updating-an-existing-package-readmemd-file).
 
 CodePen image hosting through GitHub does not require an npm release. The patch

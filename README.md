@@ -4,7 +4,7 @@ Material card component inspired by the Google Material color palette, built wit
 
 [Working demo on CodePen](https://codepen.io/marlenesco/full/NqOozj)
 
-[![See full preview](https://cdn.jsdelivr.net/gh/marlenesco/material-cards@main/assets/images/preview.jpg)](https://codepen.io/marlenesco/full/NqOozj/)
+[![See full preview](https://cdn.jsdelivr.net/gh/marlenesco/material-cards@fd5fdacfcb4d16e4f567091a5fc4da68050afc08/assets/images/preview.jpg)](https://codepen.io/marlenesco/full/NqOozj/)
 
 ## Installation
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.5 - 2026-11-06
+
+- Moved all demo images from S3 into the repository and updated the local demo paths.
+- Updated the README preview to use a commit-pinned GitHub CDN URL.
+- Documented CodePen image URLs and kept demo photos out of the npm package.
+- JavaScript, CSS, and the public API are unchanged.
+
 ## 2.0.4 - 2026-10-07
 
 - Corrected the SCSS mixin name from `mc-transtition` to `mc-transition` and updated all internal usages.
