@@ -14,6 +14,23 @@
 
 ## 2) Validation
 
+Review dependency audits in the repository and each standalone example:
+
+```bash
+npm audit
+npm audit --omit=dev
+npm --prefix examples/next-demo audit
+npm --prefix examples/vue-demo audit
+npm --prefix examples/sveltekit-demo audit
+```
+
+As of 2026-11-06, npm still reports `GHSA-gcqx-w48m-w2h4` for `deepmerge`
+and its dependents. Its CVE, `CVE-2026-93753`, was officially rejected on
+2026-11-02 because it does not describe a security vulnerability; see the
+[official CVE record](https://github.com/CVEProject/cvelistV5/blob/main/cves/2026/93xxx/CVE-2026-93753.json).
+Keep the raw audit output visible and verify that any remaining findings are
+only this rejected advisory. Do not downgrade dependencies to hide this report.
+
 1. Install dependencies:
 
 ```bash

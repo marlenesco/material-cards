@@ -13,8 +13,8 @@
     "@material-cards/vue": "file:../../packages/vue"
   },
   "devDependencies": {
-    "vite": "^5.4.11",
-    "@vitejs/plugin-vue": "^5.1.5",
+    "vite": "^7.3.7",
+    "@vitejs/plugin-vue": "^6.0.10",
     "typescript": "^5.7.3"
   }
 }

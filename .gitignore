@@ -6,3 +6,8 @@ npm-debug.log*
 packages/**/dist
 packages/svelte/.svelte-kit
 examples/**/node_modules
+examples/**/dist
+examples/**/.next
+examples/**/.svelte-kit
+examples/**/build
+examples/**/*.tsbuildinfo

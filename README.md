@@ -103,6 +103,8 @@ document.querySelector('.material-card').addEventListener('shown.material-card',
 
 ## Development
 
+Use Node.js 24 LTS (24.11.0 or later) for the development toolchain.
+
 ```bash
 npm install
 npm run build

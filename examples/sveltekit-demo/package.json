@@ -4,19 +4,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "svelte-kit sync && svelte-kit build"
+    "build": "svelte-kit sync && vite build"
   },
   "dependencies": {
     "@material-cards/core": "file:../../packages/core",
     "@material-cards/svelte": "file:../../packages/svelte",
-    "@lucide/svelte": "^0.469.0",
-    "@sveltejs/kit": "^2.12.0",
-    "svelte": "^4.2.19"
+    "@lucide/svelte": "^1.70.0",
+    "@sveltejs/kit": "^3.1.1",
+    "svelte": "^5.57.3"
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^3.3.1",
-    "vite": "^5.4.11",
-    "typescript": "^5.7.3",
-    "@sveltejs/vite-plugin-svelte": "^3.1.2"
+    "@sveltejs/adapter-auto": "^8.0.0",
+    "vite": "^8.3.6",
+    "typescript": "^6.0.0",
+    "@sveltejs/vite-plugin-svelte": "^7.3.1"
   }
 }
